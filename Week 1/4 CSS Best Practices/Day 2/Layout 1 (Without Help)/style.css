@@ -12,3 +12,9 @@
   height: 100px;
   width: 600px;
 }
+
+.small-box {
+  border: 2px solid lightgrey;
+  height: 50px;
+  width: 50px;
+}
