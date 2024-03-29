@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<!--
+
+  Default Layout:
+  display:block; => elements stacked on top of eachother, line after line
+
+  Scenario #1
+  display:flex; => elements are side by side
+
+    display:flex; unlocks:
+      - flex-direction
+      - align-items
+      - justify-content
+
+  Magical Property #1: flex-direction
+  Scenario #1.1 => using flex-direction: row;
+
+    display:flex;
+    flex-direction: row; (default)
+      - by default elements will align side by side
+
+  Scenario #1.2 => using flex-direction: column;
+
+    display:flex;
+    flex-direction: column;
+      - elements will stack on top of eachother
+      - exactly the same as using => display:block;
+  
+  Magical Propetty #2: align-items
+  Layout #2 => using align-items
+
+    display: flex;
+    align-items: stretch; (default)
+      - elements are stretched to the top and bottom of the container
+
+  Scenario #2.1 => using align-items
+
+    display: flex;
+    align-items:center;
+      - most used, aligns elements vertically
+
+  Scenario #2.2
+
+    display:flex;
+    align-items: flex-end;
+      - aligns elements to the bottom of the container
+  
+  Magical Property #3: justify-content
+  Layout #3 => using justify-content
+
+    display:flex;
+    justify-content: flex-start; (default)
+      - aligns elements horizontally at the start of the element
+    
+  Scenario #3.1 => using justify-content
+
+    display:flex;
+    justify-content: center;
+      - puts all the elements at the center of the container
+
+  Scenario #3.2 => using justify-content
+
+    display: flex;
+    justify-content: flex-end;
+     - puts all the elements at the end of the container, at the horizontal
+
+  Scenario #3.3 => using justify-content
+
+    display:flex;
+    justify-content: space-around;
+     - makes sure the spaces around and in between each element is the same
+
+  Scenario #3.4 => using justify-content
+
+    display:flex;
+    justify-content: space-between;
+     - moves element #1 all the way to the left and element #3 all the way to the right an equalizes the spaces between all three elements
+     - used on <nav> a lot
+
+  2 Wizards Together
+    
+    justify-content: ____; and align-items: _____;
+
+  Scenario #4.1 => using justify-content and align-items
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     - aligns elements both in the center vertically and horizontally
+
+  Scenario #4.2 => using justify-content and align-items
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+     - aligns element #1 to the far left, element #3 to the far right, centered at the vertical axis
+
+  3 Wizards Together
+
+    justify-content: ___; and align-items: ___; and flex-direction: ___;
+
+  If we use:
+    
+    flex-direction: column; => justify-content: ___; and align-items: ___; switch roles
+     - align-items: ___; changes to horizontally
+     - justify-content: ___; changes to vertically
+
+  Scenario #5.1
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     - aligns element to the top of of the vertical axis and center on the horizontal axis
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     - aligns element to the center of both the vertical and horizontal axis
+
+  AT THE START OF EVERY PROJECT DAVID SETS EVERY ELEMENT IN STYLE.CSS TO => border-box
+
+    *{
+      box-sizing: border-box
+    }
+
+-->
+
+<!--
+
+  justify-content: flex-end; => elements move to far right on the horizontal axix
+
+  justify-content: center; => elements align at the center of container on the horizontal axis
+
+  justify-content: space-around; => elements have equal space around themselves on the horizontal axis
+
+  justify-content: space-between; => elements have equal space between themselves on the horizontal axis
+
+-->
+
+<!--
+
+  display: flex;
+  justify-content: ___; => aligns items horizontally with the following ___:
+  
+    - flex-start: Items align to the left side of the container.
+    - flex-end: Items align to the right side of the container.
+    - center: Items align at the center of the container.
+    - space-between: Items display with equal spacing between them.
+    - space-around: Items display with equal spacing around them.
+
+  display:flex;
+  align-items: ___; => aligns items vertically with the following ____:
+  
+    - flex-start: Items align to the top of the container.
+    - flex-end: Items align to the bottom of the container.
+    - center: Items align at the vertical center of the container.
+    - baseline: Items display at the baseline of the container.
+    - stretch: Items are stretched to fit the container.
+
+    - Another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item.
+
+  display:flex;
+  flex-direction: ___; 
+    => defines the direction items are placed in the container, with the following ____:
+  
+    - row: Items are placed the same as the text direction.
+    - row-reverse: Items are placed opposite to the text direction.
+    - column: Items are placed top to bottom.
+    - column-reverse: Items are placed bottom to top.
+  
+  Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2). 
+
+  .___ {
+  order: ___;
+  }
+
+  display: flex;
+  flex-wrap: ___; => Spreads elements out, using following __:
+  
+    - nowrap: Every item is fit to a single line.
+    - wrap: Items wrap around to additional lines.
+    - wrap-reverse: Items wrap around to additional lines in reverse.
+
+  display: flex;
+  flex-flow: __ __; 
+  => combines both properties of flex-wrap and flex-direction seperating the __ with a space
+    - i.e. 
+      1) flex-flow: row wrap; => items are placed in a row to additional lines
+      2) flex-flow: column wrap-reverse; items are in a column and opposite order
+  
+  display: flex;
+  align-content: ___; 
+  => sets how multiple lines are items are spaced apart from each other, using following ___
+  
+    - flex-start: Lines are packed at the top of the container.
+    - flex-end: Lines are packed at the bottom of the container.
+    - center: Lines are packed at the vertical center of the container.
+    - space-between: Lines display with equal spacing between them.
+    - space-around: Lines display with equal spacing around them.
+    - stretch: Lines are stretched to fit the container.
+
+    align-content => determines the spacing between lines
+    
+    align-items => determines how the items as a whole are aligned within the container
+    
+    - When there is only one line, align-content has no effect
+    
+-->
+
+</html>
