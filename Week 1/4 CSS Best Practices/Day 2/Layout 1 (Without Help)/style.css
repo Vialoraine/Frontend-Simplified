@@ -6,3 +6,9 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+.container {
+  border: 2px solid lightgrey;
+  height: 100px;
+  width: 600px;
+}
