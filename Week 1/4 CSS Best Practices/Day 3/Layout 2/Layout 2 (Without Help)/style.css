@@ -1,35 +1,36 @@
-  * {
+* {
   box-sizing: border-box;
-  }
+}
 
-  .container {
+.container {
   border: 4px solid lightgrey;
   padding: 24px 24px 0 24px;
   display: flex;
   justify-content: center;
-  }
-  
-  .row {
+}
+
+.row {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  }
+}
 
-  .title {
-    border: 2px solid lightgray;
-    height: 25px;
-    width: 100%;
-  }
-  
-  .box-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 24px 24px 24px 0;
-  }
+.title {
+  border: 2px solid lightgray;
+  height: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+}
 
-  .box {
-    border: 4px solid lightgray;
-    height: 100px;
-    width: 100px;
-  }
+.box {
+  border: 4px solid lightgray;
+  height: 100px;
+  width: 30%;
+  margin-bottom: 24px;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
