@@ -1,5 +1,7 @@
 <!--
 
+  Container and Row => Responsiveness Notes:
+
   How to make elements within a container split into two rows:
   
   1) go to the element class in css
@@ -26,4 +28,274 @@
   margin: 0 auto;
   }
   
+-->
+
+<!--
+
+Intro to CSS Notes:
+  
+  What is CSS?
+   - Stands for Cascading Stylesheets
+   - Used to style websites
+
+  Methods for adding CSS
+  There are three methods for adding CSS
+  
+  1) Inline CSS - style directly in the HTML element
+  2) Internal CSS - using <style> tags within an HTML file
+  3) External CSS (recomemended) - Linking an external CSS file
+ 
+  Examples of CSS:
+  - color = sets the color of the text
+  - background-color = sets the background-color of the element
+  - width = sets the width of the element, best practice is % instead of px
+  - height = sets the height of the element
+  - border = sets a border around the element 
+  - font-size =
+  - font-family =
+  - font-weight =
+
+  Importing Fonts:
+   go to fonts.google.com
+   find a font => get font
+   click ' < > Get embed code'
+   click ' change styles ' => selct font sizes
+    ex: 
+    Roboto => light 300, regular 400, medium 500, bold 700
+    Select correct use: web and @import and follow directions
+
+  Color in CSS:
+  3 ways to get color
+
+  - words: red, green, blue, cyan
+  - RGB: rgb (0, 255, 0) => green
+  - Hex: #ff0000 => red
+  
+  What is a box model?
+    - a container that consists of multiple different properties
+  What does it consist of?
+      - content
+      - padding (top, right, bottom, left) in px
+      - border
+      - margin (top, right, bottom, left) in px
+  box-sizing 
+    automatic => content-box; means content is the width and height that is set
+                 border-box; border+padding+content => shrinks around content
+  Vertical margins auto-collapse = best practice is to use margin vs padding
+  Padding increases spaces within the box, Margin is for elements
+  
+  Complex Properties:
+  - display: two css display values
+    - block =>  takes 100% of the width and starts on a new line
+                eg. <p> and <div> tags
+    - inline => doesn't allow you to a set width or height for element and starts on the same line
+                eg. <span> <img> tags
+         
+  Position: CSS position values (common)
+  - static (default) => follows normal flow of the page
+  - relative => follows normal flow of the page
+             => lets you position using top, left, bottom, right
+  - absolute => does not follow the normal flow of the page
+             => lets you position with top, left, bottom, right
+             => position is based off closest 'position': relative' parent
+             => doesn't take 100% of the width - we would need to set it ourselves
+  Position: CSS position value (uncommon)
+  - fixed => sticks element to a permanent location on the page
+          => lets you use top, left, bottom, right
+  - sticky => sticks element to a permanent location on the page once it hits a threshold
+  
+  Media Queries:
+  What are media queries used for? => used to make a web page responsive
+  - Common Breakpoints (max-width)
+    - 576px => mobile phones
+    - 768px => tablets
+    - 992px => desktops
+    - 1200px+ => large desktops
+  - syntax:
+
+      @media (max-width:992px) {
+        div {
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        div {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        div {
+          font-size: 16px;
+        }
+      }
+  
+  Extras (Pseudo selectors, Animations, BEM)
+  Psuedo Selectors:
+    We have 2 pseudo elements in CSS
+     - after
+     - before
+
+    Pseudo elements = accessed by two colons:
+
+      div::before {
+      content: "Frontend Simplified"
+      }
+    
+      index.html has a <div>Welcome to</div>
+      using the below css => Welcome to Frontend Simplified
+      and the opposite div::after => Frontend Simplified Welcome to
+      
+        div::before{
+        content: "Frontend Simplified"
+        }
+      }
+
+    Psudo class = accessed by one colon:
+
+      div {
+      transition: background-color 300ms;
+      }
+      
+      div:hover {
+      background-color: rgb(0, 0, 0, 0.5);
+      }
+
+      Used to trigger dark mode and light mode by changing background contrast or color
+    
+    Making a button float css syntax:
+
+      button {
+      animation: float 2000ms infinite;
+      transition: all 300ms;
+      }
+      
+      button:hover {
+      background-color: black;
+      color: white;
+      }
+      
+      @keyframes float {
+      0% {
+      transform: translateY(0);
+      }
+      100% {
+      transform: translateY(10px);
+      }
+
+      The button is floating but hard resets back to the starting position
+      By changing the button from:
+
+        button {
+        animation: float 2000ms infinite;
+        transition: all 300ms;
+        }
+
+        to
+
+        button {
+        animation: float 2000ms infinite alternate-reverse;
+        transition: all 300ms;
+        }
+        
+      The floating button now slowly comes down and slowly reverses up
+
+  BEM (Block-Element-Modifier) is a naming convention used for CSS classes to make them easier to read and understand
+    
+    Block Element Modifier
+     - B [block] is the block component => <button> <nav> <main> <footer>
+     - E [element] is the dependent on the block component
+     - M [modifier] is used to change the style of the block
+
+      index.html:
+
+      <nav class="nav"></nav>
+      <a href="" class="nav__link nav__link--active">Home</a>
+      <a href="" class="nav__link">About</a>
+      <a href="" class="nav__link">Pricing</a>
+      <a href="" class="nav__link">Contact</a>
+
+      style.css:
+
+      .nav__link {
+      color: black;
+      }
+      .nav__link--active{
+      color: purple;
+      font-weight: bold;
+      }
+
+-->
+
+<!--
+
+  Flexbox Notes:
+
+  display: flex;
+  justify-content: ___; => aligns items horizontally with the following ___:
+  
+    - flex-start: Items align to the left side of the container.
+    - flex-end: Items align to the right side of the container.
+    - center: Items align at the center of the container.
+    - space-between: Items display with equal spacing between them.
+    - space-around: Items display with equal spacing around them.
+
+  display:flex;
+  align-items: ___; => aligns items vertically with the following ____:
+  
+    - flex-start: Items align to the top of the container.
+    - flex-end: Items align to the bottom of the container.
+    - center: Items align at the vertical center of the container.
+    - baseline: Items display at the baseline of the container.
+    - stretch: Items are stretched to fit the container.
+
+    - Another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item.
+
+  display:flex;
+  flex-direction: ___; 
+    => defines the direction items are placed in the container, with the following ____:
+  
+    - row: Items are placed the same as the text direction.
+    - row-reverse: Items are placed opposite to the text direction.
+    - column: Items are placed top to bottom.
+    - column-reverse: Items are placed bottom to top.
+  
+  Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2). 
+
+  .___ {
+  order: ___;
+  }
+
+  display: flex;
+  flex-wrap: ___; => Spreads elements out, using following __:
+  
+    - nowrap: Every item is fit to a single line.
+    - wrap: Items wrap around to additional lines.
+    - wrap-reverse: Items wrap around to additional lines in reverse.
+
+  display: flex;
+  flex-flow: __ __; 
+  => combines both properties of flex-wrap and flex-direction seperating the __ with a space
+    - i.e. 
+      1) flex-flow: row wrap; => items are placed in a row to additional lines
+      2) flex-flow: column wrap-reverse; items are in a column and opposite order
+  
+  display: flex;
+  align-content: ___; 
+  => sets how multiple lines are items are spaced apart from each other, using following ___
+  
+    - flex-start: Lines are packed at the top of the container.
+    - flex-end: Lines are packed at the bottom of the container.
+    - center: Lines are packed at the vertical center of the container.
+    - space-between: Lines display with equal spacing between them.
+    - space-around: Lines display with equal spacing around them.
+    - stretch: Lines are stretched to fit the container.
+
+    align-content => determines the spacing between lines
+    
+    align-items => determines how the items as a whole are aligned within the container
+    
+    - When there is only one line, align-content has no effect
+    
 -->
