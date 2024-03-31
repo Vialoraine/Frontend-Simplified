@@ -11,11 +11,13 @@
   align-items: center;
 }
 
-.small-wrapper {
+.box-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
   margin: 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 .small-box {
@@ -29,16 +31,12 @@
   border: 2px solid lightgray;
   height: 200px;
   width: 50%;
-  margin: 24px 24px 0 0;
-}
-
-.tiny-wrapper {
-  display: flex;
-  flex-flow: row;
+  margin: 24px 24px 24px 0;
 }
 
 .tiny-box {
   border: 2px solid lightgray;
   height: 50px;
   width: 50px;
+  margin: 24px 24px 24px 0;
 }
