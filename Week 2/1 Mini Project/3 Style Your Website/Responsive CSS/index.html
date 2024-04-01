@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <nav> <!-- => navigation links -->
+      <img src="./assets/FES.svg" alt="fes-logo-nav">
+      <!-- <img SOURCE="" ALTERNATE TEXT DESCRIPTION OF IMAGE=""> -->
+      <ul> <!-- unordered list -->
+        <li><a href="#about">About</a></li> <!-- <list item> <a href=""> => hyperlink -->
+        <li><a href="#discord">Discord</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div>
+        <h1>Best place to learn Frontend</h1>
+        <p>Go from absolute beginner to pro with a simplified process</p>
+        <button>Start now</button>
+      </div>
+      <figure> <!-- using figure self contains like a div -->
+        <img src="./assets/laptop.png" alt="monitor">
+      </figure>
+    </header>
+  </section>
+  <main>
+    <section id="about"> <!-- adding an id is like a class but lets us link -->
+      <h2>About</h2>
+      <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A doloribus, eveniet fugiat autem architecto, dicta
+          explicabo ad minima reprehenderit accusamus necessitatibus ex! Delectus saepe labore atque eos quidem,
+          doloribus obcaecati!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae iure recusandae asperiores officia molestias
+          excepturi dolor. Quam pariatur molestiae numquam dolorum maiores quas nihil aspernatur quae, corporis quo
+          nobis amet.</p>
+      </div>
+      <figure>
+        <img src="./HTML Practise Assets/about.jpg" alt="laptop">
+      </figure>
+    </section>
+    <section id="discord">
+      <h2>Discord</h2>
+      <figure>
+        <img src="./HTML Practise Assets/discord.png" alt="discord-logo">
+      </figure>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum culpa tempore soluta. Impedit,
+          deleniti ipsam error molestiae earum facere mollitia, non suscipit perferendis doloribus esse vitae culpa,
+          harum modi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quae rem perspiciatis delectus quasi, excepturi
+          nostrum, velit deleniti at, in eius ab. Vero sint libero, hic beatae at earum saepe.</p>
+      </div>
+    </section>
+    <section id="Contact">
+      <h2>Contact</h2>
+      <form>
+        <label>Email</label> <!-- proper syntax for <span> -->
+        <input type="email" placeholder="jane@example.com"> <!-- single line input -->
+        <label>Message</label> <!-- placeholder -->
+        <textarea type="text" placeholder="Nice, website, let's connect!"></textarea>
+        <!-- textarea is a multi-line input -->
+      </form>
+      <button>Submit</button>
+    </section>
+  </main>
+  <footer>
+    <img src="./assets/FES.svg" alt="fes-logo-footer">
+    <div>
+      <a href="#about">About</a>
+      <a href="#discord">Discord</a>
+      <a href="#contact">Contact</a>
+      <a href="">Courses</a>
+    </div>
+    <p>Copyright Frontend Simplified</p>
+  </footer>
+</body>
+
+</html>
