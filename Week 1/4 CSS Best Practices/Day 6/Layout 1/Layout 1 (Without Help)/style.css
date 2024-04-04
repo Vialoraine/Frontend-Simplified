@@ -6,3 +6,30 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container, .box {
+  border: 4px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.big-box {
+  height: 100px;
+  width: 100px;
+  margin: 12px;
+}
+
+.box-wrapper {
+  display: flex;
+}
+
+.small-box {
+  height: 80px;
+  width: 80px;
+  margin: 0 12px;
+}
