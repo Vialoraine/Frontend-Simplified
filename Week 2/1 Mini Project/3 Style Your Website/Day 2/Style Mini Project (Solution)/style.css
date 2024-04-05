@@ -13,7 +13,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-    background-color: #cafdff;
+  background-color: #cafdff;
 }
 
 header {
@@ -26,11 +26,12 @@ header {
 }
 
 h1 {
-font-size: 72px; /* font size */
+  font-size: 72px; /* font size */
 }
 
 .subheader {
   font-size: 36px;
+  margin: 16px 0 24px 0;
 }
 
 button {
@@ -59,4 +60,59 @@ ul {
 li {
   list-style-type: none; /* removes the bullet points */
   padding-left: 16px;
+}
+
+.row {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+
+ABOUT
+
+*/
+
+#about {
+  padding: 48px 0;
+  background-color: #f8ffdc;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__img--wrapper {
+  width: 40%;
+}
+
+img {
+  width: 100%;
+}
+
+.section__description--wrapper {
+  width: 60%;
+}
+
+.section__description--wrapper, /* groups classes and css chanegs */
+.about__img--wrapper {
+  padding: 0 24px;
+}
+
+
+.section__description--para {
+  font-size: 20px;
+  line-height: 1.5; /* space between line heights */
+  margin-bottom: 24px;
 }
