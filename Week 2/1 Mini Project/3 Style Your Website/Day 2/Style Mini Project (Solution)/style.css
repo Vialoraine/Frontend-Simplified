@@ -70,6 +70,12 @@ li {
   justify-content: center;
 }
 
+#about,
+#discord,
+#contact {
+  padding: 48px 0;
+}
+
 /*
 
 ABOUT
@@ -115,4 +121,14 @@ img {
   font-size: 20px;
   line-height: 1.5; /* space between line heights */
   margin-bottom: 24px;
+}
+
+/*
+
+DISCORD
+
+*/
+
+#discord {
+  background-color: #cefeff;
 }
