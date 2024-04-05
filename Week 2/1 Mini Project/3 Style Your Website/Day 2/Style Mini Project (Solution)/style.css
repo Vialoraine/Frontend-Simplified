@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* font name and backup */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -26,13 +26,26 @@ header {
 }
 
 h1 {
-font-size: 72px;
+font-size: 72px; /* font size */
+}
+
+.subheader {
+  font-size: 36px;
+}
+
+button {
+  background-color: #05c7cf;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer; /* changes cursor appearance */
 }
 
 a {
   color: black;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 700; /* font weight of text => how bold */
 }
 
 .logo {
@@ -44,6 +57,6 @@ ul {
 }
 
 li {
-  list-style-type: none;
+  list-style-type: none; /* removes the bullet points */
   padding-left: 16px;
 }
