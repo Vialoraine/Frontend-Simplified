@@ -58,7 +58,7 @@ h1 {
 
 .subheader {
   text-align: center;
-  margin: 0 24px;
+  margin: 24px;
 }
 
 .header__link--lists {
@@ -73,4 +73,21 @@ h1 {
 
 .header__logo--drawing {
   height: 500px;
+}
+
+#tech {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech__link {
+  width: 25%;
+  padding: 24px;
 }
