@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*
+  NAV
+  */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.nav__nav--button {
+  display: flex;
+  margin-right: 24px;
+}
+
+li {
+  list-style: none;
+  padding: 12px;
+}
+
+.nav__nav--logo {
+  height: 100%;
+  width: 25%;
+  margin-left: 24px;
+}
+
+/*
+  HEADER
+  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: plum;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 45%;
+  max-width: 100%;
+  margin: 24px;
+}
+
+.head__button {
+  width: 100px;
+  background-color: aqua;
+  color: white;
+  border: none;
+}
+
+.head__img {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 45%;
+  max-width: 100%;
+  margin: 24px;
+}
+
+/*
+  About
+  */
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__para--wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 45%;
+  max-width: 100%;
+  margin-left: 24px;
+}
+.about__img {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 45%;
+  max-width: 100%;
+  margin: 24px;
+}
+
+.about__title {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 24px 0;
+}
+
+/*
+Discord
+*/
+
+#discord {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #add8e6;
+}
+
+.discord__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discord__para--wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 45%;
+  max-width: 100%;
+  margin-left: 24px;
+}
+.discord__img {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 45%;
+  max-width: 100%;
+}
+
+.discord__title {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 24px 0;
+}
+
+/*
+Contact
+*/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c0d9e1;
+}
+
+.contact__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.contact__button {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  background-color: aqua;
+  color: white;
+  border: none;
+}
+
+/*
+Footer
+*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.footer__nav--button {
+  display: flex;
+}
+
+.nav__nav--button {
+  display: flex;
+  margin-right: 24px;
+}
+
+.footer__logo {
+  height: 100%;
+  width: 25%;
+  margin-top: 24px;
+}
+
+.footer__copyright {
+  margin-bottom: 24px;
+}
