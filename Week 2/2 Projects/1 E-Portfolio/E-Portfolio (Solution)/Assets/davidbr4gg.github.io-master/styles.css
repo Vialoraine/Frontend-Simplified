@@ -5,3 +5,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6, span { /* reseting element attributes */
+  color: #242424; /* resets element colors */
+  text-align: center; /* centers elements */
+  list-height: 1.25; /* resets height between lines */
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
