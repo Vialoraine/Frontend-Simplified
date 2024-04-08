@@ -116,9 +116,9 @@ li {
 .btn__menu {
   background-color: transparent;
   font-size: 40px;
-  text-align: center;
   border: none;
   color: #7342d6;
+  display: none;
 }
 
 .menu__backdrop {
@@ -132,6 +132,20 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  /* visibility:hidden and opacity: 0 => display:none */
+  /* but you need to add a visibility: visible styling to the other element */
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.menu--open .menu__backdrop {
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu__links {
@@ -401,3 +415,21 @@ footer {
 .footer__link {
   padding: 0 8px;
 }
+
+/* coding a burger menu  */
+
+@media (max-width: 550px) {
+  .nav__links {
+    display: none;
+  }
+
+  /* when under 550px nav__links disappear */
+
+  .btn__menu {
+    display: block;
+  }
+
+  /* when under 550px burger button appears */
+}
+
+/* coding a burger menu  */
