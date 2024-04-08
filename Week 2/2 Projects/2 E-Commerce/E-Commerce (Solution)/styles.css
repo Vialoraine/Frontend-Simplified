@@ -30,7 +30,21 @@ p {
   /* increases the height between lines of text */
 }
 
-.nav__container {
+.nav__container,
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__container,
+.footer__container {
   width: 100%;
   max-width: 1200px;
   /* when we set a 100% width set a max-width for responsiveness */
@@ -41,14 +55,13 @@ p {
   /* moves elements to opposite ends */
   align-items: center;
   /* centers elements */
-  margin: 0 auto;
 }
 
 .purple {
   color: #7342d6;
 }
 
-.logo {
+.logo, .footer__logo {
   width: 160px;
 }
 
@@ -225,7 +238,6 @@ button:active {
   margin-bottom: 16px;
 }
 
-
 /* FEATURES */
 
 #features {
@@ -279,7 +291,39 @@ button:active {
 .book__price--normal {
   text-decoration: line-through;
   padding-right: 6px;
-  color: #bfbfbb
+  color: #bfbfbb;
 }
 
 /* RECENT */
+
+#explore {
+  background-color: rgba(115, 66, 214, 0.1);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* FOOTER */
+
+#footer {
+
+}
+
+.footer__logo {
+
+}
+
+.footer__link {
+  margin: 64px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.footer__copyright {
+  margin: 16px 24px;
+  color: black;
+  font-weight: bold;
+}
