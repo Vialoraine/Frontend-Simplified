@@ -131,8 +131,8 @@ li {
   bottom: 0;
   z-index: 100;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .menu__links {
@@ -152,10 +152,9 @@ li {
 
 .btn__menu--close {
   position: absolute;
-  right: 20px;
   top: 10px;
+  right: 20px;
   padding: 8px;
-  /* adding padding makes sure the element doesn't touch the side of the window */
   color: white;
 }
 
