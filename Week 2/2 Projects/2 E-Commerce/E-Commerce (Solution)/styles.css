@@ -326,10 +326,6 @@ button:active {
 
 /* FOOTER */
 
-/* #footer {
-
-} */
-
 footer {
   background-color: #242424;
 }
@@ -355,17 +351,3 @@ footer {
 .footer__link {
   padding: 0 8px;
 }
-/* .footer__link {
-  margin: 64px;
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  font-weight: bold;
-  padding: 8px;
-} */
-
-/* .footer__copyright {
-  margin: 16px 24px;
-  color: black;
-  font-weight: bold;
-} */
