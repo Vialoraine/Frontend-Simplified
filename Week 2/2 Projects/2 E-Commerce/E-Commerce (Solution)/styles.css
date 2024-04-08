@@ -43,7 +43,7 @@ a:hover {
 }
 
 .nav__container {
-/* .footer__container { */
+  /* .footer__container { */
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
@@ -56,7 +56,7 @@ a:hover {
 } */
 
 .nav__container {
-/* .footer__container { */
+  /* .footer__container { */
   width: 100%;
   max-width: 1200px;
   /* when we set a 100% width set a max-width for responsiveness */
@@ -74,7 +74,7 @@ a:hover {
 }
 
 .logo {
-/* , .footer__logo {*/
+  /* , .footer__logo {*/
   width: 160px;
 }
 
@@ -293,6 +293,7 @@ button:active {
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
@@ -309,7 +310,8 @@ button:active {
 }
 
 .highlight__img {
-  border: 2px solid #7342d6;
+  border: 2px solid #7342d65d;
+  color: #7342d6;
   width: 100px;
   height: 100px;
   display: flex;
@@ -323,6 +325,7 @@ button:active {
 .highlight__subtitle {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /* FEATURES */
@@ -387,7 +390,6 @@ button:active {
   background-color: rgba(115, 66, 214, 0.1);
 }
 
-
 /* FOOTER */
 
 footer {
@@ -416,7 +418,39 @@ footer {
   padding: 0 8px;
 }
 
-/* coding a burger menu  */
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+  .header__description {
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .book {
+    width: 50%;
+  }
+
+  .highlight {
+    width: 100%;
+  }
+
+  .highlight:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  /* for the highlight container, everything except the last element has a margin */
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
 
 @media (max-width: 550px) {
   .nav__links {
@@ -431,5 +465,3 @@ footer {
 
   /* when under 550px burger button appears */
 }
-
-/* coding a burger menu  */
