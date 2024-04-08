@@ -124,7 +124,6 @@ li {
 .menu__backdrop {
   position: absolute;
   background-color: #242424;
-  /* the bottom code makes the menu take the entire visual height */
   top: 0;
   left: 0;
   right: 0;
