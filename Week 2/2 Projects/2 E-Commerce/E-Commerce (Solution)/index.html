@@ -7,6 +7,7 @@
   <title>Library</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
   <!-- script allows us to pull image from fontawesome -->
 </head>
 
@@ -21,6 +22,27 @@
           <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
         </ul>
       </div>
+      <!-- coding a burger menu -->
+      <button class="btn__menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="menu__backdrop">
+        <button class="btn__menu btn__menu--close">
+          <i class="fas fa-times">
+        </button>
+        <ul class="menu__links">
+          <li class="menu__list">
+            <a href="#" class="menu__link">Home</a>
+          </li>
+          <li class="menu__list">
+            <a href="#features" class="menu__link">Books</a>
+          </li>
+          <li class="menu__list">
+            <a href="#" class="menu__link no-cursor">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- coding a burger menu -->
     </nav>
     <header>
       <div class="header__container">
@@ -313,26 +335,26 @@
         </div>
       </div>
     </section>
-    </main>
-    
-    <footer>
-      <div class="container">
-        <div class="row row__column">
-          <a href="#">
-            <figure class="footer__logo">
-              <img src="./assets/Library.svg" class="footer__logo--img" alt="">
-            </figure>
-          </a>
-          <div class="footer__list">
-            <a href="#" class="footer__link">Home</a>
-            <a class="footer__link no-cursor">About</a>
-            <a href="#features" class="footer__link">Books</a>
-            <a class="footer__link no-cursor">Contact</a>
-          </div>
-          <div class="footer__copyright">Copyright &copy; 2021 Library</div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="./assets/Library.svg" class="footer__logo--img" alt="">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="#" class="footer__link">Home</a>
+          <a class="footer__link no-cursor">About</a>
+          <a href="#features" class="footer__link">Books</a>
+          <a class="footer__link no-cursor">Contact</a>
         </div>
+        <div class="footer__copyright">Copyright &copy; 2021 Library</div>
       </div>
-    </footer>
+    </div>
+  </footer>
 </body>
 
 </html>

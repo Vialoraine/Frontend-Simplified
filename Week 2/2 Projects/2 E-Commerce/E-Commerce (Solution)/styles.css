@@ -111,6 +111,58 @@ li {
   /* animates a underline to disappear */
 }
 
+/* coding a burger menu  */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #7342d6;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  /* the bottom code makes the menu take the entire visual height */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  color: white;
+  font-size: 40px;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  /* adding padding makes sure the element doesn't touch the side of the window */
+  color: white;
+}
+
+/* coding a burger menu  */
+
+/* LANDING */
+
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
 }
