@@ -7,3 +7,559 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  padding: 32px;
+  }
+  
+  body {
+  overflow-x: hidden;
+  }
+  
+  .row {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  }
+  
+  .container {
+  padding: 80px 0;
+  }
+
+  .btn {
+
+  }
+
+  .purple {
+
+  }
+
+  .white {
+
+  }
+
+  /* NAV */
+
+  nav {
+    
+  }
+
+  .nav__container {
+
+  }
+
+  .nav__container--logo {
+
+  }
+
+  .nav__container--name {
+
+  }
+
+  .nav__lists {
+
+  }
+
+  .nav__list {
+
+  }
+
+  .nav__list--btn {
+
+  }
+
+  /* HEADER */
+
+  #header {
+
+  }
+
+  .header__container {
+
+  }
+
+  .header__container--description {
+
+  }
+
+  .header__description--title {
+
+  }
+
+  .header__description--para {
+
+  }
+
+  .header__contact {
+
+  }
+
+  .header__contact--input {
+
+  }
+
+  .header__contact--button {
+
+  }
+
+  .header__description--customers {
+
+  }
+
+  .header__para {
+
+  }
+
+  .header__img--customers {
+
+  }
+
+  /* FEATURES */
+
+  #features {
+
+  }
+
+  .features__heading {
+
+  }
+
+  .features__title {
+
+  }
+
+  .features__subtitle {
+
+  }
+
+  .features__para {
+
+  }
+
+  /* HIGHLIGHTS */
+
+  #highlights {
+
+  }
+
+  .highlight__img {
+
+  }
+
+  .highlight__title {
+
+  }
+
+  .highlight__para {
+
+  }
+
+  /* QUALITY */
+
+  #quality {
+
+  }
+
+  .quality__container {
+
+  }
+
+  .quality__heading {
+
+  }
+
+  .quality__title {
+
+  }
+
+  .quality__para {
+
+  }
+
+  .quality__button {
+
+  }
+
+  .quality__img--wrapper {
+
+  }
+
+  .quality__img {
+
+  }
+
+  /* STEPS */
+
+  #steps {
+
+  }
+
+  .steps__img--wrapper {
+
+  }
+
+  .steps__img {
+
+  }
+
+  .steps__description--container {
+
+  }
+
+  .steps__heading {
+    
+  }
+
+  .steps__title {
+
+  }
+
+  .steps__lists {
+
+  }
+
+  .steps__list {
+
+  }
+
+  .steps__list--num {
+
+  }
+
+  .steps__list--title {
+
+  }
+
+  .steps__list--description {
+
+  }
+
+  /* VALUES */
+
+  #values {
+
+  }
+
+  .values__container {
+
+  }
+
+  .values__title {
+
+  }
+
+  .values__heading {
+
+  }
+
+  .values__para {
+
+  }
+
+  .values__container--affordable {
+
+  }
+
+  .values__affordable {
+
+  }
+
+  .values__title {
+
+  }
+
+  .values__container--professionalism {
+
+  }
+
+  .values__professionalism {
+
+  }
+
+  .values__button {
+
+  }
+
+  .values__img--wrapper {
+
+  }
+
+  .values__img {
+
+  }
+
+/* PRICING */
+
+#pricing {
+
+}
+
+.pricing__container {
+
+}
+
+.pricing__heading {
+
+}
+
+.pricing__title {
+
+}
+
+.pricing__para {
+
+}
+
+.pricing__plans {
+
+}
+
+.pricing__plan {
+
+}
+
+.pricing__highlight--personal {
+
+}
+
+.plan__name--option {
+
+}
+
+.plan__name--num {
+
+}
+
+.plan__price--payment {
+
+}
+
+.pricing__hr {
+
+}
+
+.plan__description {
+
+}
+
+.plan__description--option {
+
+}
+
+.plan__description--feature {
+
+}
+
+.plan__button {
+
+}
+
+.personal__button {
+
+}
+
+.pricing__plan {
+
+}
+
+.pricing__highlight--business {
+
+}
+
+.hr--color {
+
+}
+
+.business__button {
+
+}
+
+.pricing__highlight--enterprise {
+
+}
+
+.enterprise__button {
+
+}
+
+/* TESTIMONIALS */
+
+#testimonials {
+
+}
+
+.testimonial__img--wrapper {
+
+}
+
+.testimonial__img {
+
+}
+
+.testimonial__description--container {
+
+}
+
+.testimonial__description {
+
+}
+
+.testimonial__heading {
+
+}
+
+.testimonial__title {
+
+}
+
+.testimonial__para {
+
+}
+
+.testimonial__slideshow {
+
+}
+
+.slideshow__container {
+
+}
+
+.mySlides {
+
+}
+
+.slideshow__ratings {
+
+}
+
+.slideshow__title {
+
+}
+
+.slideshow__para {
+
+}
+
+.slideshow__info {
+
+}
+
+.slideshow__customer {
+
+}
+
+/* FAQS */
+
+#faqs {
+
+}
+
+.faqs__description--container {
+
+}
+
+.faqs__description {
+
+}
+
+.faqs__description--heading {
+
+}
+
+.faqs__description--title {
+
+}
+
+.faqs__description--para {
+
+}
+
+.faqs__info--collapsible {
+
+}
+
+.faqs__collapsible {
+
+}
+
+/* STARTING */
+
+#starting {
+
+}
+
+.starting__description--container {
+
+}
+
+.starting__description--wrapper {
+
+}
+
+.starting__description--title {
+
+}
+
+.starting__button--get-started {
+
+}
+
+.starting__button--contact {
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+}
+
+.footer__links {
+
+}
+
+.footer__link {
+
+}
+
+.link__heading {
+
+}
+
+.footer__lists {
+
+}
+
+.footer__list {
+
+}
+
+.footer__hr {
+
+}
+
+.footer__cont {
+
+}
+
+.footer__logo {
+
+}
+
+.footer__logo--img {
+
+}
+
+.footer__logo--name {
+
+}
+
+.footer__copyright {
+
+}
+
+.footer__cont--links {
+  
+}
