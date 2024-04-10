@@ -56,8 +56,12 @@ p {
 
 img {
   width: 100%;
-  max-width: 50px;
-  height: auto;
+  /* max-width: 50px; */
+  /* height: auto; */
+}
+
+::placeholder {
+  color: #a0aec0;
 }
 
 .purple {
@@ -157,10 +161,110 @@ color: #6415ff;
   border: none;
 }
 
+/* MAIN */
+
+.main__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 0;
+  animation: fade-in-left 500ms 300ms backwards ease;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  max-width: 100%;
+}
+
+.main__container--header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.25;
+  color: #1a202c;
+  text-align: left;
+  margin: 0 0;
+  width: 100%;
+}
+
+.main__container--contact {
+position: relative;
+text-align: center;
+display: flex;
+}
 
 
+.main__input {
+  width: 180px;
+  max-width: 190px;
+  border-radius: 9999px;
+  border-width: 2px;
+  padding: 20px 192px 20px 32px;
+  font-weight: 500;
+  height: 24px;
+  border-style: solid;
+  border-color: #E2E8F0;
+  font-size: 100%;
+  transition: all 300ms ease;
+}
 
-/* HEADER */
+.main__input:hover {
+  border-color: #a0aec0;
+}
+
+.main__button,
+.main__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 160px;
+  background: #6415ff;
+  color: #f7fafc;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.main__button:hover {
+  background-color: #6415ff;
+}
+
+.main__container--customer {
+  margin-top: 48px;
+}
+
+.main__para--customer {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: #a0aec0;
+  margin: 0;
+}
+
+.main__img--customer {
+  margin-top: 16px;
+  width: 100%;
+  opacity: .5;
+}
+
+.main__container--wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 100%;
+}
+
+.main__img--figure {
+  width: 100%;
+}
+
+/* NEED TO FIX GET START BUTTON */
+
 
 /* FEATURES */
 
