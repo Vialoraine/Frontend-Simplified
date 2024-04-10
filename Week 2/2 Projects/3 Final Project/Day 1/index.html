@@ -27,23 +27,23 @@
           <!-- nav elements -->
           <ul class="nav__lists">
             <li class="nav__list">
-              <a href="#">About</a>
+              <a href="#" class="nav__link">About</a>
             </li>
             <li class="nav__list">
-              <a href="#">Blog</a>
+              <a href="#" class="nav__link">Blog</a>
             </li>
             <li class="nav__list">
-              <a href="#">Pricing</a>
+              <a href="#" class="nav__link">Pricing</a>
             </li>
             <li class="nav__list">
-              <a href="#">Contact Us</a>
+              <a href="#" class="nav__link">Contact Us</a>
             </li>
             <li class="nav__list">
-              <a href="#">Login</a>
+              <a href="#" class="nav__link">Login</a>
             </li>
             <!-- sign up button -->
             <button class="btn nav__list--btn">
-              <a href="#">Sign Up</a>
+              <a href="#" class="nav__link--sign-up">Sign Up</a>
             </button>
             </li>
           </ul>
@@ -74,13 +74,13 @@
             <input type="email" placeholder="Your E-mail Address" class="header__contact--input">
             <!-- header contact submit button -->
             <button class="btn header__contact--button">
-              <a href="#">Get Started</a>
+              <a href="#" class="header__button--get-started">Get Started</a>
             </button>
           </div>
           <!-- header customer container -->
           <div class="header__description--customers">
             <!-- header customer description -->
-            <p class="header__para">
+            <p class="header__para--customers">
               OUR TRUSTED CUSTOMERS
             </p>
             <img src="https://treact.owaiskhan.me/static/media/customers-logo-strip.680ac7c2e8ae28161d2c.png"
@@ -111,63 +111,88 @@
   </section>
   <!-- highlight section -->
   <section id="highlights">
-    <!-- highlights container -->
-    <div class="highlights__container">
-      <!-- highlight element -->
+    <!-- highlight element -->
+    <div class="row highlights__row">
       <div class="highlight">
-        <!-- highlight image -->
-        <img src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
-          class="highlight__img" alt="shield-icon">
-        <!-- highlight title -->
-        <h5 class="highlight__title">Secure</h5>
-        <!-- highlight paragraph -->
-        <p class="highlight__para">We strictly only deal with vendors that provide top notch security.</p>
+        <div class="highlight__img--wrapper">
+          <!-- highlight image -->
+          <img src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
+            class="highlight__img" alt="shield-icon">
+        </div>
+        <!-- highlights container -->
+        <div class="highlight__description--wrapper">
+          <!-- highlight title -->
+          <h5 class="highlight__title">Secure</h5>
+          <!-- highlight paragraph -->
+          <p class="highlight__para">We strictly only deal with vendors that provide top notch security.</p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
-          class="highlight__img" alt="headset-icon">
-        <h5 class="highlight__title">24/7 Support</h5>
-        <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
-        </p>
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
+            class="highlight__img" alt="headset-icon">
+        </div>
+        <div class="highlight__description--wrapper">
+          <h5 class="highlight__title">24/7 Support</h5>
+          <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+          </p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
-          class="highlight__img" alt="scale-icon">
-        <h5 class="highlight__title">Customizable</h5>
-        <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
-        </p>
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
+            class="highlight__img" alt="scale-icon">
+        </div>
+        <div class="highlight__description--wrapper">
+          <h5 class="highlight__title">Customizable</h5>
+          <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+          </p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
-          alt="arrow-icon">
-        <h5 class="highlight__title">Reliable</h5>
-        <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
-        </p>
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
+            class="highlight__img" alt="arrow-icon">
+        </div>
+        <div class="highlight__description--wrapper">
+          <h5 class="highlight__title">Reliable</h5>
+          <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+          </p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
-          class="highlight__img" alt="bolt-icon">
-        <h5 class="highlight__title">Fast</h5>
-        <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
-        </p>
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
+            class="highlight__img" alt="bolt-icon">
+        </div>
+        <div class="highlight__description--wrapper">
+          <h5 class="highlight__title">Fast</h5>
+          <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+          </p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
-          class="highlight__img" alt="person-icon">
-        <h5 class="highlight__title">Easy</h5>
-        <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
-        </p>
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
+            class="highlight__img" alt="person-icon">
+        </div>
+        <div class="highlight__description--wrapper">
+          <h5 class="highlight__title">Easy</h5>
+          <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
+          </p>
+        </div>
       </div>
       <div class="highlight">
-        <img src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
-          class="highlight__img" alt="shield-icon">
+        <div class="highlight__img--wrapper">
+          <img src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
+            class="highlight__img" alt="shield-icon">
+        </div>
         <div class="highlight__description--wrapper">
           <h5 class="highlight__title">Secure</h5>
           <p class="highlight__para">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.
           </p>
         </div>
       </div>
-    </div>
     </div>
   </section>
   <!-- quality section -->
@@ -189,13 +214,13 @@
           consequat.
         </p>
         <!-- learn more button -->
-        <a href="#" class="btn quality__button">Learn More</a>
+        <button class="btn quality__button"><a href="#" class="btn quality__button">Learn More</a></button>
       </div>
       <!-- quality imgage container -->
       <figure class="quality__img--wrapper">
         <!-- quality image -->
         <img src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b525c2f8c9808e.png"
-          class="about__quality--img" alt="girl-on-desktop">
+          class="quality--img" alt="girl-on-desktop">
       </figure>
     </div>
   </section>
@@ -619,61 +644,72 @@
           <!-- footer list container -->
           <ul class="footer__lists">
             <!-- footer list group  -->
-            <li class="footer__list"><a href="#">Blog</a></li>
-            <li class="footer__list"><a href="#">FAQs</a></li>
-            <li class="footer__list"><a href="#">Support</a></li>
-            <li class="footer__list"><a href="#">About Us</a></li>
+            <div class="footer__link">
+              <li><a href="#" class="footer__link">Blog</a></li>
+              <li><a href="#" class="footer__link">FAQs</a></li>
+              <li><a href="#" class="footer__link">Support</a></li>
+              <li><a href="#" class="footer__link">About Us</a></li>
           </ul>
         </div>
-        <div class="footer__link">
-          <h5 class="link__heading">PRODUCT</h5>
+        <div class=" footer__link">
+          <h5 class="link__heading">PRESS</h5>
           <ul class="footer__lists">
-            <li class="footer__list"><a href="#">Log In</a></li>
-            <li class="footer__list"><a href="#">Personal</a></li>
-            <li class="footer__list"><a href="#">Business</a></li>
-            <li class="footer__list"><a href="#">Team</a></li>
+            <li><a href="#" class="footer__link">Log In</a></li>
+            <li><a href="#" class="footer__link">Personal</a></li>
+            <li><a href="#" class="footer__link">Business</a></li>
+            <li><a href="#" class="footer__link">TEAM</a></li>
           </ul>
         </div>
         <div class="footer__link">
           <h5 class="link__heading">PRESS</h5>
           <ul class="footer__lists">
-            <li class="footer__list"><a href="#">Logos</a></li>
-            <li class="footer__list"><a href="#">Events</a></li>
-            <li class="footer__list"><a href="#">Stories</a></li>
-            <li class="footer__list"><a href="#">Office</a></li>
-          </ul>
-        </div>
-        <div class="footer__link">
-          <h5 class="link__heading">LEGAL</h5>
-          <ul class="footer__lists">
-            <li class="footer__list"><a href="#">GDPR</a></li>
-            <li class="footer__list"><a href="#">Privacy Policy</a></li>
-            <li class="footer__list"><a href="#">Terms of Service</a></li>
-            <li class="footer__list"><a href="#">Disclaimer</a></li>
+            <li><a href="#" class="footer__link">Logos</a></li>
+            <li><a href="#" class="footer__link">Events</a></li>
+            <li><a href="#" class="footer__link">Stories</a></li>
+            <li><a href="#" class="footer__link">Office</a></li>
           </ul>
         </div>
       </div>
-      <!-- footer horizontal break -->
-      <hr class="footer__hr">
-      <!-- footer continued -->
-      <div class="footer__cont">
-        <!-- footer logo wrapper -->
-        <div class="footer__logo">
-          <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-            alt="treact-logo" class="footer__logo--img">
-          <h5 class="footer__logo--name">Treact Inc.</h5>
-        </div>
-        <!-- copyright -->
-        <p class="footer__copyright">© 2018 Treact Inc. All Rights Reserved.</p>
-        <!-- footer links wrapper -->
-        <div class="footer__cont--links">
-          <!-- footer links group -->
-          <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com"><i class="fab fa-youtube"></i>
-          </a>
-        </div>
+      <div class="footer__link">
+        <h5 class="link__heading">TEAM</h5>
+        <ul class="footer__lists">
+          <li><a href="#" class="footer__link">Career</a></li>
+          <li><a href="#" class="footer__link">Founders</a></li>
+          <li><a href="#" class="footer__link">Culture</a></li>
+          <li><a href="#" class="footer__link">Onboarding</a></li>
+        </ul>
       </div>
+      <div class="footer__link">
+        <h5 class="link__heading">LEGAL</h5>
+        <ul class="footer__lists">
+          <li><a href="#" class="footer__link">GDPR</a></li>
+          <li><a href="#" class="footer__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__link">Terms of Service</a></li>
+          <li><a href="#" class="footer__link">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- footer horizontal break -->
+    <hr class="footer__hr">
+    <!-- footer continued -->
+    <div class="footer__cont">
+      <!-- footer logo wrapper -->
+      <div class="footer__logo">
+        <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="treact-logo"
+          class="footer__logo--img">
+        <h5 class="footer__logo--name">Treact Inc.</h5>
+      </div>
+      <!-- copyright -->
+      <p class="footer__copyright">© 2018 Treact Inc. All Rights Reserved.</p>
+      <!-- footer links wrapper -->
+      <div class="footer__cont--links">
+        <!-- footer links group -->
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
     </div>
   </footer>
 </body>
