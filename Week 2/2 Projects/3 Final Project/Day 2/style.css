@@ -88,7 +88,7 @@ img {
   color: #243e63;
   font-size: 24px;
   font-weight: 900;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
 }
 
 .logo__img {
@@ -108,8 +108,9 @@ img {
 }
 
 .logo__link:hover {
-  color:#6415ff
+  color: #6415ff;
 }
+
 
 .nav__links,
 .nav__link {
@@ -130,8 +131,8 @@ img {
 
 .nav__link--login:hover,
 .nav__link:hover {
-text-decoration: underline;
-color: #6415ff;
+  text-decoration: underline;
+  color: #6415ff;
 }
 
 .nav__link--login {
@@ -183,29 +184,29 @@ color: #6415ff;
   line-height: 1.25;
   color: #1a202c;
   text-align: left;
-  margin: 0 0;
+  margin: 0 auto;
   width: 100%;
 }
 
 .main__container--contact {
-position: relative;
-text-align: center;
-display: flex;
+  position: relative;
+  max-width: 448px;
+  text-align: center;
+  display: flex;
 }
 
-
 .main__input {
-  width: 180px;
-  max-width: 190px;
+  max-width: 448px;
   border-radius: 9999px;
   border-width: 2px;
   padding: 20px 192px 20px 32px;
   font-weight: 500;
-  height: 24px;
+  height: 100%;
   border-style: solid;
-  border-color: #E2E8F0;
-  font-size: 100%;
+  border-color: #e2e8f0;
+  font-size: 16px;
   transition: all 300ms ease;
+  text-align: left;
 }
 
 .main__input:hover {
@@ -214,20 +215,21 @@ display: flex;
 
 .main__button,
 .main__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
   right: 0;
   top: 0;
   bottom: 0;
-  position: absolute;
-  width: 160px;
-  background: #6415ff;
+  border-radius: 9999px;
+  width: 100%;
+  max-width: 141px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6415ff;
   color: #f7fafc;
-  border-color: transparent;
-  font-weight: bold;
-  font-size: 100%;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .main__button:hover {
@@ -241,7 +243,7 @@ display: flex;
 .main__para--customer {
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   color: #a0aec0;
   margin: 0;
 }
@@ -249,7 +251,7 @@ display: flex;
 .main__img--customer {
   margin-top: 16px;
   width: 100%;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .main__container--wrapper {
@@ -265,10 +267,112 @@ display: flex;
 
 /* NEED TO FIX GET START BUTTON */
 
+/* SERVICE */
 
-/* FEATURES */
+.service__container {
+  animation: fade-in-right 600ms 300ms backwards ease;
+}
+
+.service__header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 0 16px;
+}
+
+.service__heading {
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 16px;
+}
+
+.service__title {
+  color: #243e63;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  margin-bottom: 16px;
+}
+
+.service__para {
+  width: 100%;
+  max-width: 576px;
+  text-align: center;
+  margin: 16px 0 0;
+  color: #7c8ba1;
+  font-size: 18px;
+  font-weight: 500;
+  line-break: 1.625;
+}
+
+.services {
+}
 
 /* QUALITY */
+
+.quality__row {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fade-in-left 600ms 300ms backwards ease;
+}
+
+.quality__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+}
+
+.quality__heading {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6;
+}
+
+.quality__title {
+  color: #243e63;
+  font-size: 48px;
+  margin: 16px 0 0;
+  font-weight: 900;
+}
+
+.quality__para {
+  margin: 16px 0 0;
+  font-weight: 500;
+  line-height: 1.625;
+  color: #7c8ba1;
+}
+
+.quality__button {
+  border-radius: 9999px;
+  max-width: 141px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6415ff;
+  border: none;
+  margin: 32px 0 0;
+  padding: 12px 32px;
+}
+
+.quality__link {
+  max-width: 141px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f7fafc;
+}
+
+/* NEED TO FIX QUALITY__BUTTON */
 
 /* TESTIMONIALS */
 
