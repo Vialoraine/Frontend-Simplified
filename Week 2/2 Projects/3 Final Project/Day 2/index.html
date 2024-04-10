@@ -14,17 +14,13 @@
 
   <section id="landing">
     <nav>
-      <!-- below => responsive -->
-      <div class="row nav__row">
-        <!-- nav -->
-        <div class="nav__container">
-          <!-- below => logo and company name -->
-          <div class="nav__container--logo">
+      <div class="row">
+        <div class="nav">
+          <div class="logo__container">
             <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-              class="nav__logo--img" alt="treact-logo">
-            <a href="#" class="nav__logo--name">Treact</a>
+              class="logo__img" alt="treact-logo">
+            <a href="#" class="logo__link">Treact</a>
           </div>
-          <!-- nav elements -->
           <ul class="nav__lists">
             <li class="nav__list">
               <a href="#" class="nav__link">About</a>
@@ -41,9 +37,8 @@
             <li class="nav__list">
               <a href="#" class="nav__link">Login</a>
             </li>
-            <!-- sign up button -->
-            <button class="btn nav__list--btn">
-              <a href="#" class="nav__link--sign-up">Sign Up</a>
+            <button class="button nav__list--button">
+              <a href="#" class="nav__link--button">Sign Up</a>
             </button>
             </li>
           </ul>
@@ -51,49 +46,42 @@
       </div>
     </nav>
   </section>
-  <!-- header -->
-  <section id="header">
-    <div class="row header__row">
-      <div class="header__container">
-        <!-- header description container -->
-        <div class="header__container--description">
-          <!-- header title -->
-          <h1 class="header__description--title">
-            Beautiful React Templates <span class="purple">for you.</span>
-          </h1>
-          <!-- header paragraph -->
-          <p class="header__description--para">Our templates are easy to setup, understand and customize. Fully
-            modular
-            components
-            with
-            a variety of pages and
-            components.</p>
-          <!-- header contact container -->
-          <div class="header__contact">
-            <!-- header contact input -->
-            <input type="email" placeholder="Your E-mail Address" class="header__contact--input">
-            <!-- header contact submit button -->
-            <button class="btn header__contact--button">
-              <a href="#" class="header__button--get-started">Get Started</a>
-            </button>
-          </div>
-          <!-- header customer container -->
-          <div class="header__description--customers">
-            <!-- header customer description -->
-            <p class="header__para--customers">
-              OUR TRUSTED CUSTOMERS
-            </p>
-            <img src="https://treact.owaiskhan.me/static/media/customers-logo-strip.680ac7c2e8ae28161d2c.png"
-              class="header__img--customers" alt="treact-customers">
-          </div>
-        </div>
-        <!-- header image container -->
-        <figure class="header__img--wrapper">
-          <img src="https://treact.owaiskhan.me/static/media/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-            class="header__img" alt="girl-on-desktop">
-        </figure>
+  <section id="main">
+    <div class="row main__container">
+      <div class="main__container">
+        <h1 class="main__container--heading">
+          Beautiful React Templates <span class="purple">for you.</span>
+        </h1>
+        <p class="main__container--para">Our templates are easy to setup, understand and customize. Fully
+          modular
+          components
+          with
+          a variety of pages and
+          components.</p>
+      </div>
+      <div class="main__container--contact">
+        <input class="main__input" type="email" placeholder="Your E-mail Address">
+        <button class="button main__button">
+          <a href="#" class="main__link">Get Started</a>
+        </button>
+      </div>
+      <div class="main__container--customer">
+        <p class="main__para--customer">
+          OUR TRUSTED CUSTOMERS
+        </p>
+        <img src="https://treact.owaiskhan.me/static/media/customers-logo-strip.680ac7c2e8ae28161d2c.png"
+          class="main__img--customer" alt="treact-customers">
       </div>
     </div>
+    <figure class="main__container--wrapper">
+      <img src="https://treact.owaiskhan.me/static/media/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
+        class="main__img--figure" alt="girl-on-desktop">
+    </figure>
+  </section>
+
+
+  </div>
+  </div>
   </section>
   <!-- feature section -->
   <section id="features">
