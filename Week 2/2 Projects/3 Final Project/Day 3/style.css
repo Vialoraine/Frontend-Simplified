@@ -1250,6 +1250,7 @@ header {
 
 .footer__socials {
   display: flex;
+  align-items: center;
 }
 
 .fa-facebook-f {
