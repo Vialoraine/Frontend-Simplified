@@ -33,6 +33,11 @@ a {
   text-decoration: none;
 }
 
+i {
+  height: 16px;
+  width: 16px;
+}
+
 .row {
   width: 100%;
   max-width: 1200px;
@@ -87,7 +92,7 @@ a {
   0% {
     opacity: 0;
     transform: translate(100vw);
-}
+  }
   100% {
     opacity: 1;
     transform: translate(0);
@@ -625,6 +630,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .values__professional--icon {
@@ -638,6 +644,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .feature__affordable--title,
