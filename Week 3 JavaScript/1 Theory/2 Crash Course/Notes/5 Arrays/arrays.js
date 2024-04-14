@@ -92,10 +92,9 @@
 
 // }
 
-// console.log(goodGrades);
 // console log 'goodGrades'
 
-// arr.map(() => {})
+// arr.map(() => {}):
 
 // let arr = [1, 4, 9, 16]
 
@@ -111,3 +110,50 @@
 // let newArray = arr.map(element => '1')
 
 // console.log(newArray);
+
+// ARRAYS EXERCISE
+
+// Turn each element in an array of dollars into cents
+
+// Examples
+// [1, 5, 10, 3] => [100, 500, 1000, 3000]
+// [0, 10, 20] => [0, 1000, 2000]
+
+// Example 1:
+
+// let dollars = [1, 5, 10, 3]
+// let cents = dollars.map(dollar => dollar * 100);
+// console.log(cents)
+
+// Example 1: Without map method
+
+// let dollars = [1, 5, 10, 3];
+// create new 'cents' array
+// let cents = [];
+
+// loop over every element in 'dollars'
+// for (let i = 0; i < dollars.length; i++) {
+  // multiply the element by 100
+  // add this element onto'cents' array
+//   cents.push(dollars[i] * 100);
+// }
+
+// console.log(cents);
+
+// Example 2:
+
+// let dollars = [0, 10, 20]
+// let cents = dollars.map(dollar => dollar * 100)
+
+// console.log(cents)
+
+// Example 2: Without map method
+
+// let dollars = [0, 10, 20];
+// let cents = []
+
+// for (let i=0; i  < dollars.length; i++) {
+//   cents.push(dollars[i] * 100);
+// }
+
+// console.log(cents)
