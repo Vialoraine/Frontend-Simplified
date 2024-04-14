@@ -51,11 +51,11 @@
 
 // Logical Operators Example
 
-let cash = 50
+// let cash = 50
 // we have $50 cash
-let price = 40
+// let price = 40
 // item costs $40
-let isStoreOpen = false
+// let isStoreOpen = false
 // store is open
 
 // if (cash >= price) {
@@ -83,11 +83,41 @@ let isStoreOpen = false
 
 // if (cash >= price && !isStoreOpen)
 
-let val = "";
+// let val = "";
 
-if (val) {
-  console.log("truthy value", !!val)
-}
-else {
-  console.log("falsy value", !!val)
-}
+// if (val) {
+//   console.log("truthy value", !!val)
+// }
+// else {
+//   console.log("falsy value", !!val)
+// }
+
+// TERNARY OPERATORS
+
+// let hot = true
+
+// hot ? console.log('weather is hot out') : console.log('weather is cold')
+
+// console logs weather is hot
+
+// let hot = false
+
+// hot ? console.log('weather is hot out') : console.log('weather is cold')
+// console logs weather is cold
+
+let subscribed = true
+let loggedIn = true
+
+subscribed && loggedIn ? 'show the video' : 'hide the video'
+// if the user is subscribed and logged in show the video if not hide the video
+
+// Ternary Exercise
+
+let cash = 50
+let price = 40
+let isStoreOpen = true
+
+// cash >= price && isStoreOpen ? console.log('give reciept') : console.log('do not give reciept') is the same as below
+
+let str = cash >= price && isStoreOpen ? "give reciept" : "do not give reciept"
+console.log(str)
