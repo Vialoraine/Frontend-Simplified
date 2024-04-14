@@ -47,6 +47,7 @@
 // 20 -> Simplified
 
 // My answer => only console logs properly up to 5
+
 // for (let i = 1; i <= 20; i++) {
 //   console.log(i);
 //   if (i === i % 3) {
@@ -60,18 +61,51 @@
 //   }
 // }
 
-for (let i = 1; i <= 20; i++) {
-  console.log(i);
-  if (0 === i % 3 && 0 === i % 5) {
-    console.log(`${i} -> Frontend Simplified`);
-  } 
-  else if (0 === i % 3) {
-    console.log(`${i} -> Frontend`);
-  } 
-  else if (0 === i % 5) {
-    console.log(`${i} -> Simplified`);
-  } 
-  else {
-    console.log(`${i} -> ${i}`);
-  }
+// Solution =>
+
+// for (let i = 1; i <= 20; i++) {
+//   console.log(i);
+//   if (0 === i % 3 && 0 === i % 5) {
+//     console.log(`${i} -> Frontend Simplified`);
+//   }
+//   else if (0 === i % 3) {
+//     console.log(`${i} -> Frontend`);
+//   }
+//   else if (0 === i % 5) {
+//     console.log(`${i} -> Simplified`);
+//   }
+//   else {
+//     console.log(`${i} -> ${i}`);
+//   }
+// }
+
+// Exercise:
+// Print out every character from the string:
+// "Frontend Simplified"
+
+// Example:
+// 'F'
+// 'r'
+// 'o'
+// ...
+// 'e'
+// 'd'
+
+// My solution =>
+
+// let i = "Frontend Simplified";
+// {
+//   console.log(i);
+// }
+
+// logs Frontend Simplified
+
+// for (let i = 0; i<= 19; i++) {
+//   console.log(i);
+// }
+
+const str = "Frontend Simplified"
+
+for (let i = 0; i < str.length; ++i) {
+  console.log(str[i]);
 }
