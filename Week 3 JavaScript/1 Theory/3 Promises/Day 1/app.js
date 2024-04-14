@@ -40,12 +40,14 @@
 
 // Creating a promise
 
-const statusRef = document.querySelector('.status')
+const statusRef = document.querySelector(".status");
 
 function getSubscriptionStatus() {
   return new Promise((resolve, reject) => {
-    resolve("VIP")
-  })
+    setTimeout(() => {
+      resolve("VIP")
+    }, 2000);
+  });
 }
 
 // Method 1: Then
@@ -53,9 +55,8 @@ function getSubscriptionStatus() {
 
 // Method 2: Async
 async function main() {
-const status = (await getSubscriptionStatus())
-statusRef.innerHTML = status
+  const status = await getSubscriptionStatus();
+  statusRef.innerHTML = status;
 }
 
 main();
-
