@@ -19,7 +19,6 @@
 // adding elements onto end of array
 // arr.push(200)
 
-// 
 // let newArr = arr.filter(element => {
 //   console.log(element);
 //   if (element < 50) {
@@ -28,4 +27,72 @@
 // });
 
 // console.log(newArr);
+
+// IS THE SAME AS
+
+// let newArray = arr.filter(element < 50)
+
+// console.log(newArr);
+
+// Arrays Exercise
+
+// Filter out all the 'FAIL' elements in an array
+
+// Examples
+// ['A+','A', 'FAIL'] => ['A+', 'A']
+// ['FAIL', 'FAIL', 'B'] => ['B']
+// ['FAIL'] => []
+
+// EXAMPLE 1:
+// let grades = ['A+', 'A', 'FAIL'];
+
+// let goodGrades = grades.filter((element) => {
+//   console.log(element)
+//   if (element !== 'FAIL') {
+//     return true;
+//   }
+// })
+
+// console.log(goodGrades)
+
+// IS THE SAME AS
+
+// let goodGrades = grades.filter(element => element !== 'FAIL')
+
+// console.log(goodGrades)
+
+// Example 2:
+// let grades = ['FAIL', 'FAIL', 'B']
+
+// let goodGrades = grades.filter(element => element !== 'FAIL')
+
+// console.log(goodGrades)
+
+// Example 3:
+// let grades = ['FAIL']
+
+// let goodGrades = grades.filter(element => element !== 'FAIL')
+
+// console.log(goodGrades)
+
+// Example 1: WITHOUT FILTER
+
+// let grades = ["A+", "A", "FAIL"]
+
+// Create a new empty array called 'goodGrades'
+
+// let goodGrades = []
+
+// for (let i = 0; i < grades.length; ++i) {
+//   if (grades[i] !== 'FAIL') {
+//     goodGrades.push(grades[i])
+//   }
+
+// add the current element onto 'goodGrades' only if the current element is not equal to 'FAIL'
+
+// }
+
+// console.log(goodGrades);
+// console log 'goodGrades'
+
 
