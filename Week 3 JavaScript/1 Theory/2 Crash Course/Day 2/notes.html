@@ -1,5 +1,192 @@
-Things to Review for Day 2:
+JavaScript Crash Course:
+  Data types and variables
+  Conditionals
+  Loops
+  Functions
+  Arrays
+  Objects
+  DOM
 
-EVERYTHINGGGG
+Console:
+  typeof__ => gives the data type
+  !!__ => logs if value is truthy or falsy
 
-and redo examples and exercises
+Data types and variables
+  What are data types in JavaScript? => data types help us organize data
+
+  Examples of data types
+    String => text
+    Number => number
+    Boolean => true or false
+    Undefined => nothing
+    Null => nothing
+
+    String => inside quotation marks 
+      ex => "Hello World" 'Frontend Simplified is amazing' `100`
+
+      Index Numbers:
+      D A V I D =>  0 1 2 3 4
+
+      Log the length of the String:
+      ex => console.log('12345'.length)
+
+      Last index of the string:
+      ex => let str = 'David'
+            console.log(str[str.length - 1])
+
+    Number =>
+      ex => 2, 10.5, -5
+
+      Symbols => respects math's order of operation
+      + => addition
+      - => subtraction
+      * => multiplication
+      / => division
+      % => modulo - calculates the remainder
+
+      Boolean => true or false
+        ex=> 5 < 10 -> true
+
+      Null and Undefined
+        Null => value of nothing
+        Undefined => value was never set
+
+      NaN => not a number, means there's an error
+    
+  Variables => store data
+
+    How to define a variables
+      var => outdated
+      let => reassignable
+      const => not reassignable
+
+    Variable names are in camelcase => name fullName lastName
+
+    Equality => "==" and "==="
+
+      = => sets a value
+      == => checks the values -> returns true or false
+      === => checks the values and the types -> best practice
+
+    Not Equal To => adding a '!'
+    
+      != => checks if the values are equal to eachother
+      !== -> best practice
+      !false => prints the opposite value -> true
+
+Conditionals => if, else 
+  Example:
+
+    let subscribed = true              
+    let loggedIn = true                     
+
+    if (subsribed === true) {          => will print if the user is subscribed
+      console.log('show the video')       
+    }
+    else if (loggedIn === true) {          => will print if user is logged in but not
+      console.log('tell user to upgrade')     subscribed
+    }
+    else {                                           => will print if user isn't
+      console.log('tell user to log into account')      logged in or subscribed
+    }
+
+  Example => replacing print with a variable in the string, using JavaScript
+
+    let cash = 30
+    let price = 40
+
+    if (cash > price) {
+      console.log(`you paid extra - here's" ${5} "dollars change`) => using backticks 
+    }                                                                 we can use js
+    else if (cash === price) {                                        in the string
+      console.log("you paid the exact amount, have a nice day!")      ex: ${5}
+    }
+    else {
+      console.log("not enough money - you still owe x dollars")
+    }
+
+  Comparison Operators => comparing two values with eachother
+    
+    == => equal values
+    === => equal values and types
+    != => not equal
+    !== => not equal value and equal type
+    > => greater than
+    < => less than
+    >= => greater than or equal to
+    <= => less than or equal to
+
+  Logical Operators:
+
+    '&&' => checks if the left and right side of the comparison is true
+      ex: true && true => true
+          true && false => false
+          false && true => false
+          false && false => false
+
+    Example =>
+
+    let cash = 50
+    let price = 40
+    let isStoreOpen = true
+
+    if (cash >= price && isStoreOpen === true) {   => if cash is greater or equal to
+      console.log('print the reciept')                price AND store is open, print
+    }
+
+    '||' => checks if the left or right side of the comparison is true
+      ex: true || true => true
+          true || false => true
+          false || true => true
+          false || false => true
+
+    Example =>
+
+    Example =>
+    
+    let cash = 50
+    let price = 40
+    let isStoreOpen = true
+    
+    if (cash >= price || isStoreOpen === true) {  => if cash is greater or equal to
+    console.log('print the reciept')                 price OR store is open, print
+    }
+
+Falsy Values
+  => values that are considered 'false' when converted to a boolean
+    
+    Undefined
+    Null
+    NaN
+    0
+    ""
+    false
+
+Truthy Values
+  => values that are considered 'true' when converted to a boolean
+
+  10
+  3.14
+  "Frontend Simplified"
+  "false"
+  "0"
+  []
+  {}
+
+Ternary Operators => shortcut for an else condition
+
+  isObese ? 'unhealthy' : 'healthy' 
+  => if the value of isObese true print unhealthy, else print healthy
+
+  subscribed ? 'show video' : 'hide video'
+  => if suscribed print show video, else print hide video
+
+  Example:
+
+  let subscribed = false
+  let loggedIn = true
+  
+  subscribed ? 'show video' : 'hide video' => see above, line 182
+  
+  
+  
