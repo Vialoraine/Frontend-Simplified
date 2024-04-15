@@ -116,7 +116,7 @@ Conditionals => if, else
     >= => greater than or equal to
     <= => less than or equal to
 
-  Logical Operators:
+  Logical Operators
 
     '&&' => checks if the left and right side of the comparison is true
       ex: true && true => true
@@ -152,41 +152,82 @@ Conditionals => if, else
     console.log('print the reciept')                 price OR store is open, print
     }
 
-Falsy Values
-  => values that are considered 'false' when converted to a boolean
+  Falsy Values
+    => values that are considered 'false' when converted to a boolean
+      
+      Undefined
+      Null
+      NaN
+      0
+      ""
+      false
+
+  Truthy Values
+    => values that are considered 'true' when converted to a boolean
+
+    10
+    3.14
+    "Frontend Simplified"
+    "false"
+    "0"
+    []
+    {}
+
+  Ternary Operators => shortcut for an else condition
+
+    isObese ? 'unhealthy' : 'healthy' 
+    => if the value of isObese true print unhealthy, else print healthy
+
+    subscribed ? 'show video' : 'hide video'
+    => if suscribed print show video, else print hide video
+
+    Example:
+
+    let subscribed = false
+    let loggedIn = true
     
-    Undefined
-    Null
-    NaN
-    0
-    ""
-    false
-
-Truthy Values
-  => values that are considered 'true' when converted to a boolean
-
-  10
-  3.14
-  "Frontend Simplified"
-  "false"
-  "0"
-  []
-  {}
-
-Ternary Operators => shortcut for an else condition
-
-  isObese ? 'unhealthy' : 'healthy' 
-  => if the value of isObese true print unhealthy, else print healthy
-
-  subscribed ? 'show video' : 'hide video'
-  => if suscribed print show video, else print hide video
-
-  Example:
-
-  let subscribed = false
-  let loggedIn = true
+    subscribed ? 'show video' : 'hide video' => see above, line 182
   
-  subscribed ? 'show video' : 'hide video' => see above, line 182
-  
-  
-  
+Loops
+  What are loops used for? => repeat the same code over and over again
+
+      console.log print 1-100
+      Example:
+
+      let count = 1;
+      console.log(count)
+      count = count + 1
+      console.log(count)
+
+  What are the types of loops in JavaScript?
+
+    for loop
+    while loop
+    do while loop
+
+      while loop:
+
+      Example: 
+        Counting to 100 in the console log
+
+        Using a while loop =>
+
+        let count = 1
+      
+        while (count <= 100) {        => () needs to be a false value or IT WILL CRASH
+          console.log(count) 
+          count=count + 1 
+        }
+
+        Using a for loop =>
+
+        for (let i = 0; i < 100; i++){
+          console.log(i + 1)
+        }
+
+    For Loop:
+                        ^ 'i' less than how many times we want to loop
+      for (let i = 0; i < 100; i++) {
+              ^ set 'i' to 0   ^ increment 'i' by 1
+        console.log(i);
+      }

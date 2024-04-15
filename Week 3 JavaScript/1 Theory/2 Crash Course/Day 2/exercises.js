@@ -40,3 +40,65 @@
     let str = cash>= price && isStoreOpen ? 'give reciept' : 'do not give reciept'
     console.log(str)
 */
+
+/*  Q: Using a while loop, print 100 times
+    A:
+    let count = 1
+    
+    while (count <= 100) {
+      console.log(count) 
+      count = count + 1
+    }
+*/
+
+/*  Q:  Write a for-loop that loops through 1 to 20
+        If the number is divisible by 3, print "Frontend"
+        If the number is divisible by 5, print "Simplified"
+        If the number is divisible by 3 and 5, print "Frontend Simplified"
+        If the number is NOT divisible by either 3 or 5, print the number
+    A:
+    // My Answer
+    for (let i = 1; i <= 20; i++){
+      if (i % 3 === 0 && i % 5 === 0){
+        console.log('Frontend Simplified')
+      }
+      else if (i % 3 === 0){
+        console.log('Frontend')
+      }
+      else if (i % 5 === 0) {
+        console.log('Simplified')
+      }
+      else {
+        console.log(i)
+      }
+    }
+    // Actual Answer
+        for (let i = 1; i <= 20; i++){
+      if (i % 3 === 0 && i % 5 === 0){
+        console.log(`$[i] -> Frontend Simplified`)
+      }
+      else if (i % 3 === 0){
+        console.log(`$[i] -> Frontend`)
+      }
+      else if (i % 5 === 0) {
+        console.log(`$[i] -> Simplified`)
+      }
+      else {
+        console.log(`$[i] -> $[i]`)
+      }
+    }
+*/
+
+/*  Q:  Print out every character from the string: "Frontend Simplified"
+        Example:
+        'F'
+        'R'
+        ...
+        'D'
+    A:
+    let str = "Frontend Simplified"
+
+    for (let i = 0;i <= str.length; i++){
+      console.log(str[i])
+    } 
+*/
