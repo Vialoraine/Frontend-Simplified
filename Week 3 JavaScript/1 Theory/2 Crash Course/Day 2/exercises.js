@@ -102,3 +102,196 @@
       console.log(str[i])
     } 
 */
+
+/*  Q:  Create a function that converts Celcius to Fahrenheit
+        
+        Celcius to Fahrenheit formula => F = C x 1.8 + 32
+
+        convertCelciusToFahrenheit(0) -> 32
+        convertCelciusToFahrenheit(10) -> 50
+        convertCelciusToFahrenheit(30) -> 86
+    A:
+    function convertCelciusToFahrenheit(celcius) {
+      return celcius * 1.8 + 32
+    }
+
+    console.log(convertCelciusToFahrenheit(0));
+    console.log(convertCelciusToFahrenheit(10));
+    console.log(convertCelciusToFahrenheit(30));
+*/
+
+/* Q: Filter out all the 'FAIL' elements in an array
+
+      ['A+', 'A', 'FAIL'] => ['A+', 'A']
+      ['FAIL', 'FAIL', 'B'] => ['B']
+      ['FAIL'] => []
+    A:
+    function convertCelciusToFahrenheit(celcius) {
+      return celcius * 1.8 + 32
+    }
+
+    let grades = ['A+', 'A', 'FAIL']
+
+    let goodGrades = grades.filter((element) => {
+      console.log(element)
+      if (element != 'FAIL') {
+        return true
+      }
+    })
+
+    console.log(goodGrades)
+
+    A: Better Solution:
+    let grades = ["A+", "A", "FAIL"];
+
+    let goodGrades = grades.filter(element => {
+      return element != 'FAIL'
+    })
+
+    console.log(goodGrades);
+
+    A: Optomized Solution:
+    let grades = ["A+", "A", "FAIL"];
+
+    let goodGrades = grades.filter(element => element != 'FAIL')
+
+    console.log(goodGrades);
+
+*/
+
+/* Q: Filter out all the 'FAIL' elements in an array using a for loop
+
+      ['A+', 'A', 'FAIL'] => ['A+', 'A']
+      ['FAIL', 'FAIL', 'B'] => ['B']
+      ['FAIL'] => []
+
+    let grades = ["A+", "A", "FAIL"];
+
+    // Create a new empty array called 'goodGrades'
+
+      for (let i = 0; i < grades.length; i++) {
+    // Add the current elemet onto 'goodGrades' only if
+    // The current element is not equal to 'FAIL'
+      console.log(grades[i]);
+    }
+
+    // Console log 'goodGrades'
+
+    A:
+    function convertCelciusToFahrenheit(celcius) {
+      return celcius * 1.8 + 32
+    }
+
+    let grades = ['A+', 'A', 'FAIL']
+
+    let goodGrades = grades.filter((element) => {
+      console.log(element)
+      if (element != 'FAIL') {
+        return true
+      }
+    })
+
+    console.log(goodGrades)
+
+    A: Better Solution:
+    let grades = ["A+", "A", "FAIL"];
+
+    let goodGrades = grades.filter(element => {
+      return element != 'FAIL'
+    })
+
+    console.log(goodGrades);
+
+    A: Optomized Solution:
+    let grades = ["A+", "A", "FAIL"];
+
+    let goodGrades = grades.filter(element => element != 'FAIL')
+
+    console.log(goodGrades);
+
+*/
+
+/* Q: Turn each element in an arrray of dollars into cents
+
+      [1, 5, 10, 3] => [100, 500, 1000, 300]
+      [0, 10, 20] => [0, 1000, 2000]
+
+    A:
+
+    let dollars = [1, 5, 10, 3];
+    let cents = dollars.map((dollars) => {
+      return dollars * 100
+    })
+
+    console.log(cents)
+    
+    A: Optimized
+
+    let dollars = [1, 5, 10, 3];
+    let cents = dollars.map(dollars => dollars * 100)
+
+    console.log(cents)
+
+    A: For Loop, without using map method
+    
+    let dollars = [1, 5, 10, 3];
+    let cents = [];
+
+    for (let i = 0; i < dollars.length; i++) {
+      cents.push(dollars[i] * 100);
+    }
+
+    console.log(cents);
+*/
+
+/* Q: Create a register function that accepts:
+
+      username
+      email
+      password
+      subscriptionStatus
+      discordId
+      lessonsCompleted
+
+      Inside your register function:
+        1) Create a user object
+        2) Push this user
+
+    A:
+    let users = [
+      {
+        userName: "user1",
+        email: "user1@frontendsimplified.com",
+        password: "user1test123",
+        subscriptionStatus: "VIP",
+        discordId: "user1#0001",
+        lessonsCompleted: [0, 1],
+      },
+      {
+        userName: "user2",
+        email: "user2@frontendsimplified.com",
+        password: "user2test123",
+        subscriptionStatus: "VIP",
+        discordId: "user2#0001",
+        lessonsCompleted: [0, 1, 3],
+      },
+    ];
+
+    function register(user) {
+      users.push(user);
+    }
+
+    register({
+      username: "user3",
+      email: "user3@frontendsimplified.com",
+      password: "user3test123",
+      subscriptionStatus: "VIP",
+      discordId: "user3#0001",
+      lessonsCompleted: "[0,1]",
+    });
+
+    // log the new user in
+    console.log(users);
+*/
+
+

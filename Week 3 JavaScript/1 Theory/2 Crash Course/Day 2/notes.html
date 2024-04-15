@@ -226,8 +226,272 @@ Loops
         }
 
     For Loop:
-                        ^ 'i' less than how many times we want to loop
+                   <!-- ^ 'i' less than how many times we want to loop -->
       for (let i = 0; i < 100; i++) {
-              ^ set 'i' to 0   ^ increment 'i' by 1
+          <!-- ^ set 'i' to 0   ^ increment 'i' by 1 -->
         console.log(i);
       }
+
+Functions
+  What is a function in JavaScript? => block of code designed to perform a task
+
+  Example:
+    
+    <!-- Function Definition -->
+    function welcomePersonToFES(firstName, lastName){
+      console.log(`Welcome to FES, ${firstName} ${lastName}`)
+    }
+
+    <!-- Call the function -->
+    welcomePersonToFES('David', 'Bragg');
+
+  Example:
+
+    function sumOfTwoNumbers(num1, num2){
+      return num1 + num2
+    }
+
+    console.log(sumOfTwoNumbers(10, 10));
+
+  2 Ways:
+    Function:
+
+    function convertCelciusToFahrenheit(celcius) {
+      return celcius * 1.8 + 32
+    }
+
+    Const:
+
+    const convertCelciusToFahrenheit(celcius) => {
+      return celcius * 1.8 + 32
+    }
+
+    console.log(convertCelciusToFahrenheit(0));
+
+Arrays
+  What are arrays? => data structure that holds multiple data values in one variable
+
+  Example:
+
+    let item1 = 20  =>  let arr = [20, 30, 40, 50, 100]
+    let item2 = 30
+    let item3 = 40
+    let item4 = 50
+    let item5 = 100
+
+  Array Index:
+
+    20  30  40  50  10
+    0   1   2   3   4 => last item in an array is -> arr.length - 1
+
+  Accessing the an item in an array => arr[]
+
+    let arr = [20, 30, 40, 50, 100]
+  
+    console.log(arr[0]) => first item
+    console.log(arr[arr.length - 1]) => last item
+
+  Adding elements to the end of an array => arr.push()
+
+    let arr = [20, 30, 40, 50, 100]
+    
+    console.log(arr[0]) => prints first item
+    console.log(arr[arr.length - 1]) => prints last item
+
+    arr.push(200) => adds 200 to the array
+
+    console.log(arr); => [20, 30, 40, 50, 100, 200] => prints updated array
+  
+  Filter out elements from an array
+    Using arr.filter() => arr.filter (() => {}) -> returns a new array
+
+      Example:
+    
+      let arr = [20, 30, 40, 50, 100]     => first array
+
+      let newArr.filter((element) => {   => creates a new array that runs through each
+        console.log(element)                 index item
+        if (element < 50) {               => removes an item if its larger than 50
+          return true                     => returns the new array and exits function
+        }
+      })
+
+      console.log(newArr)                 => prints -> [20, 30, 40]
+
+      Optimized Example of Above:
+
+      let arr = [20, 30, 40, 50, 100]
+                                    IS THE SAME AS
+      let newArr.filter(element => {    =>     let NewArr = arr.filter(element =>
+        return element < 50                     element < 50)
+      })
+      
+      console.log(newArr)
+
+    2 Ways of Filtering an Array:
+
+      Using arr.filter() =>
+
+        let grades = ["A+", "A", "FAIL"];
+        
+        let goodGrades = grades.filter(element => element != 'FAIL')
+        
+        console.log(goodGrades);
+
+      Using a for loop =>
+
+        let grades = ["A+", "A", "FAIL"];
+        let goodGrades = []
+    
+        for (let i = 0; i < grades.length; i++) { 
+          if (grades[i] !='FAIL') 
+          goodGrades.push(grades[i])
+          console.log(grades[i]); 
+        }
+
+        console.log(goodGrades)
+    
+    Turn elements into an array into something else => arr.map
+
+      Example:
+
+      let arr = [1, 4, 9, 16]
+
+      let newArr = arr.map((element) => {     => arr.map looks through every index
+        console.log(element)                  => prints [1, 4, 9, 16]
+        return undefined;                     => changes index into undefined
+      })
+
+      console.log(newArr)                     => prints [undifined,..., undifined]
+
+      Example Optimized:
+
+      let arr = [1, 4, 9, 16]
+
+      let newArr = arr.map(element => 'undefined')
+
+      console.log(newArr)
+
+      Example with a for loop:
+
+      let arr = [1, 4, 9, 16]
+      let newArr = []
+      
+      for (let i = 0; i < arr.length; i++) { 
+        newArr.push(arr[i]==='undefined') 
+      } 
+      
+      console.log(newArr)
+
+  Callback Function Syntax:
+
+    (() => {
+
+    })
+
+Objects
+  What are objects in JavaScript? => used to store multiple properties in a variable
+
+  Example:
+                                          =>      let user = {
+    let userFirstName = 'David'                   firstName: 'David',
+    let userLastName = 'Bragg'                    email: 'david@frontend.com',
+    let userDiscordID = 'David Bragg#0001'        subscriptionStatus: 'VIP',
+    let userSubscriptionStatus = 'VIP'           }
+
+    let user = {
+      firstName: 'David',
+      email: 'david@frontend.com',
+      subscriptionStatus: 'VIP',
+      discordId: 'David Bragg#0001',
+      lessonsCompleted: [0, 1]
+    }
+
+    console.log(user.firstName)       => prints 'David'
+    console.log(user.lessonsCompleted.map(element => element * 2)) => prints [0, 2]
+    
+  Multiple User Data in an Array Example: 
+
+    let users = [{
+      firstName: 'David',
+      email: 'david@frontend.com',
+      password: 'test123',
+      subscriptionStatus: 'VIP',
+      discordId: 'David Bragg#0001',
+      lessonsCompleted: [0, 1]
+    },
+    {
+      firstName: 'Mitri',
+      email: 'mitri@frontend.com',
+      password: 'mitri123'
+      subscriptionStatus: 'VIP',
+      discordId: 'Mitri#0001',
+      lessonsCompleted: [0, 1]
+     },
+    {
+      firstName: 'Zen',
+      email: 'zen@frontend.com',
+      password: 'zen123'
+      subscriptionStatus: 'VIP',
+      discordId: 'Zen#0001',
+      lessonsCompleted: [0, 1]
+    },
+    ];
+
+    function login(email, password) {
+      for (let i = 0; i < users.length; i++)
+      console.log(users[i]);                => displays all three user data sets
+    }
+
+    login('david@frontend.com', 'test123')
+
+    console.log(users[0]) => prints all the information under David
+    console.log(users[0].firstName) => prints 'David'
+    console.log(users[0].lessonsCompleted.map(element => element * 2)) 
+      => prints [0, 2]
+
+  Console log data only related to a one object:
+  
+    let users = [{
+      firstName: 'David',
+      email: 'david@frontend.com',
+      password: 'test123',
+      subscriptionStatus: 'VIP',
+      discordId: 'David Bragg#0001',
+      lessonsCompleted: [0, 1]
+    },
+    {
+      firstName: 'Mitri',
+      email: 'mitri@frontend.com',
+      password: 'mitri123'
+      subscriptionStatus: 'VIP',
+      discordId: 'Mitri#0001',
+      lessonsCompleted: [0, 1]
+    },
+    {
+      firstName: 'Zen',
+      email: 'zen@frontend.com',
+      password: 'zen123'
+      subscriptionStatus: 'VIP',
+      discordId: 'Zen#0001',
+      lessonsCompleted: [0, 1]
+    },
+    ];
+  
+    function login(email, password) {
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email === email) {  => if a users email matches the user email
+          console.log(users[i]);         => console log that users data         
+          if (users[i].password === password) {
+            console.log('log the user in - the details are correct')
+          }
+          else {
+            console.log('password is incorrect - try again')
+          }
+          return;
+        }
+      }
+      console.log('could not find an email that matches')
+    }
+  
+    login('david@frontend.com', 'test123') => prints david's data
