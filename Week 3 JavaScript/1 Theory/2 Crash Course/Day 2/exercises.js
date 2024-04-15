@@ -294,3 +294,23 @@
     console.log(users);
 */
 
+/*  Q:  Create a function that changes h1 red
+        
+        document.querySelector('.title').style.fontSize = '28px'
+
+        function changeTitleToRed() {
+          console.log('clicked');
+        }
+
+    A:
+    document.querySelector(".title").style.fontSize = "28px";
+
+    function changeTitleToRed() {
+      document.querySelector(".title").style.color = "red"
+      console.log('clicked');
+    }
+*/
+
+function toggleDarkMode() {
+  document.querySelector("body").classList.toggle("dark-theme");
+}

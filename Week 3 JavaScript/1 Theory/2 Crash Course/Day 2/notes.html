@@ -498,3 +498,58 @@ Objects
 
 DOM (Document Object Model)
   What is the DOM? => allows access and change the styling and content of elements on your website
+
+  First way of accessing an element:
+    document.querySelector('#title')    =>  most used one, accessed like css
+                                            class = '.___' id = '#___'
+
+  Second way of accessing an element:
+    document.getElementByID('title')    => better practice
+
+  Changing inner HTML: 
+    Example:
+      Head: <script src="____" defer></script>
+        => defer loads the HTML first then runs the JS script
+
+      HTML: <h1 class="title">David Bragg</h1>
+        => without js reads -> David Bragg
+
+      JS: document.querySelector('.title').innerHTML = 'Frontend Simplified'
+        => with js .title reads -> Frontend Simplified
+
+      JS: document.querySelector('.title').innerHTML += 'Frontend Simplified'
+        => with js .title reads -> David BraggFrontend Simplified
+
+  Changing CSS:
+    Example:
+
+      JS: document.querySelector('.title').style.fontSize = '28px'
+        => .title now reads font size 28px
+
+    Click Listeners:
+
+      HTML: <h1 class="title">David Bragg</h1>
+            <button onClick="changeTitleToRed()">Click Me</button>
+
+      JS: function changeTitleToRed() {
+          document.querySelector(".title").style.color = "red"
+          }
+    
+    "Dark Mode":
+
+      HTML: <body class="dark-theme"></body>
+            <button onClick="toggeleDarkMode()">Click Me</button>
+
+      CSS: .dark-theme {
+            background-color: black;
+            }
+      
+            .dark-theme * {
+            color: white;
+            }
+
+      JS: function toggleDarkMode() {
+          document.querySelector('body').classList.toggle("dark-theme")
+          }
+
+      
