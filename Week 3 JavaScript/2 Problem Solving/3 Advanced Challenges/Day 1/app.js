@@ -60,3 +60,30 @@ console.log(
 // "Async Await JavaScript ES7" - Techsith (1.5x speed)
 // "Async JS Crash Course - Callbacks, Promises, Async Await" - Travsery Media (1.5x speed)
 
+// Q5 Find all the posts bt a single user
+// Call this API "https://jsonplaceholder.typicode.com/posts" and return all the posts by any given user id.
+
+const postsByUser = async (userId) => {
+  const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const result = await promise.json()
+
+  const posts = result.filter(element => element.userId === userId)
+
+  console.log(posts)
+};
+
+postsByUser(4);
+
+// Q6 First 6 Incomplete Todos
+// Call this API "https://jsonplaceholder.typicode.com/todos" and return the first 6 incomplete todo's from the result
+
+const firstSixIncomplete = async (completed) => {
+  const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const result = await promise.json()
+
+  const incomplete = result.filter(element => !element.completed).slice(0, 6)
+
+  console.log(incomplete)
+}
+
+firstSixIncomplete(6);
