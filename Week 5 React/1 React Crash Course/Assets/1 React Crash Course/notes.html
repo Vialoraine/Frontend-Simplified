@@ -1,0 +1,292 @@
+Crash Course Overview
+  - Intro to React
+  - Reusable Components
+  - Props
+  - Event Handlers
+  - React Hooks
+  - Routing
+  - API Integration
+
+Intro to React
+
+  What is React? 
+    A javascript library for building user interfaces
+
+  Why use React?
+    - Easier to use
+    - Maintainable
+    - Scalable
+    - Popular frontend Framework
+  
+  npm start => starts up local server (localhost:3000)
+
+  components are rendered and exported in app.js and called and imported within index.js
+
+  within the index.js the app is exectuted within <app />
+
+Reusable Components
+
+  Why use reusable components?
+    Components help reduce code duplication
+
+  Changing app.js to app.jsx allows us to autocomplete our html tags, but will throw an error, we need to also change the pathing in index.js
+    import App from './App' => import App from 'App.jsx'
+
+  React Components
+    
+    Two parts to components:
+      - Creating a component
+
+        Inside the src folder we create a folder 'components'
+          stores all of our components
+
+        Creating a component:
+          1. Create a new file => "Todo.jsx"
+          2. Inside of this file create a function
+            <!-- function Todo () {} -->
+          3. Inside of the function, return some JSX 
+            <!-- function Todo () {
+              return <div>Finish Frontend Simplified</div>
+            } -->
+          4. Export the function
+            <!-- export default Todo -->
+          
+          Todo.jsx would look like:
+          <!-- function Todo() {
+            return (
+              <div>Todo</div>
+            )
+          }
+          
+          export default Todo -->
+
+
+      - Using a component
+
+          Using a component:
+            1. Import the file into App.jsx
+              <!-- import Todo from './components/Todo.jsx' -->
+            2. Use the component
+              Long Syntax:
+                <!-- <Todo></Todo> -->
+              Short Syntax:
+                <!-- <Todo /> -->
+
+      - Notes on Creating a React Todo App:
+
+        Creating a new Title component:
+
+        Create a new component file => Title.jsx
+        It gets placed in our components folder
+
+        Title.jsx:
+
+          Long Syntax for a single JSX component:
+
+          <!-- function Title() {
+            return <h1>My Todo List</h1>;
+          }
+          
+          export default Title; -->
+          
+          Short Syntax using Arrow Function for a single JSX component:
+          <!-- const Title = () => <h1>My Todo List</h1>;
+          
+          export default Title; -->
+        
+        Then we import it into our App.jsx
+
+          <!-- import './App.css';
+          import Todo from './components/Todo.jsx'
+          import Title from './components/Title.jsx' -->
+
+        Adding styling:
+
+        Make a corresponding css file within the components folder
+
+          Todo.css: 
+
+          <!-- * {
+            color: red;
+          } -->
+
+        Then we import it into the corresponding jsx component
+
+          Todo.jsx: 
+
+            <!-- import './Todo.css'
+            
+            function Todo() {
+              return (
+                <div>
+                  <h2>Finish Frontend Simplified</h2>
+                  <button>Delete</button>
+                </div>
+              );
+            }
+            
+            export default Todo -->
+
+        Adding a class to a component for styling:
+        
+        Todo.jsx: 
+
+          <!-- import './Todo.css'
+          
+          function Todo() {
+            return (
+              <div className="todo">
+                <h2>Finish Frontend Simplified</h2>
+                <button>Delete</button>
+              </div>
+            );
+          }
+          
+          export default Todo -->
+
+        Todo.css:
+
+          <!-- .todo {
+            width: calc(100% / 3);
+            border: 1px solid black;
+            padding: 16px;
+          } -->
+
+        Getting the todo elements to render on one line
+
+        App.css:
+          
+          <!-- * {
+            box-sizing: border-box;
+          }
+          
+          .todo__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+          } -->
+
+        App.jsx:
+          We add a new div with a className of todo__wrapper, wrapping our todo components inside
+
+          import './App.css';
+          import Todo from './components/Todo.jsx'
+          import Title from './components/Title.jsx'
+          
+          
+          <!-- function App() {
+            return (
+              <div>
+                <Title />
+                <div className="todo__wrapper">
+                  <Todo />
+                  <Todo />
+                  <Todo />
+                </div>
+              </div>
+            );
+          }
+          
+          export default App; -->
+
+        Creating a modal component:
+
+        Modal.jsx:
+
+          <!-- import './Modal.css'
+          
+          function Modal() {
+            return (
+              <div>
+                <div className="modal">
+                  <p className="modal__title">Are you sure?</p>
+                  <div className="modal__buttons">
+                    <button className="btn btn__cancel">Cancel</button>
+                    <button className="btn">Confirm</button>
+                  </div>
+                </div>
+                <div className="backdrop" />
+              </div>
+            );
+          }
+          
+          export default Modal; -->
+
+        Modal.css: 
+
+          <!-- .btn {
+            padding: 8px 32px;
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: #7645d9;
+            color: white;
+            border: 1px solid #7645d9;
+          }
+          
+          .btn__cancel {
+            background-color: transparent;
+            color: #7645d9;
+          }
+          
+          .btn__cancel:hover {
+            background-color: #ebebeb;
+          }
+
+          .modal {
+            border-radius: 4px;
+            background-color: white;
+            padding: 16px;
+            text-align: center;
+            width: 460px;
+            z-index: 1000;
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          
+          .modal__title {
+            margin-bottom: 8px;
+            font-size: 18px;
+          }
+          
+          .modal__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+          }
+          
+          .backdrop {
+            position: fixed;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.70);
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+          } -->
+
+        App.jsx: 
+          
+          <!-- import './App.css';
+          import Todo from './components/Todo.jsx'
+          import Title from './components/Title.jsx'
+          import Modal from "./components/Modal.jsx";
+          
+          function App() {
+            return (
+              <div>
+                <Title />
+                <div className="todo__wrapper">
+                  <Todo />
+                  <Todo />
+                  <Todo />
+                </div>
+                <Modal />
+              </div>
+            );
+          }
+          
+          export default App; -->
+
+
+
