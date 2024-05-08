@@ -640,4 +640,352 @@ Event Handlers
       
       export default App; -->
 
+React Hooks
 
+  There are multiple react hooks, but the most important ones are:
+
+  - useState
+
+    useState is how we define variables in React.
+    As soon as the useState variable changes, it will rerender the component automatically.
+
+    What is conditional rendering?
+      Rendering a component when a certain condition is met.
+
+    useState returns an array with two values:
+      - the first value is the state of the element when rendered
+      - the second value is the function that updates state of the element
+
+    <!-- const [state, setState] = useState(false) -->
+
+    in the code above:
+      state => a variable
+      setState => a function that changes the state
+      useState() => returns an array
+      const [state, setState] => arr.destructuring the value returned from useState()
+      (false) => setting a default value of false to state
+
+    App.jsx: 
+
+      <!-- import "./App.css";
+      import Todo from "./components/Todo.jsx";
+      import Title from "./components/Title.jsx";
+      import Modal from "./components/Modal.jsx";
+      import React, { useState } from "react";
+      
+      
+      function App() {
+      const [showModal, setShowModal] = useState(false)
+      
+      
+      return (
+        <div>
+          <Title />
+          <div>
+            <input type="text" onChange={(event)=> {
+            console.log(event.target.value)
+            }} />
+            <button onClick={()=> setShowModal(true)}>Add Todo</button>
+          </div>
+          <div className="todo__wrapper">
+            {/*
+            <Todo title="Finish Frontend Simplified" paragraph="Code along with Frontend Simplified" /> */}
+            <Todo title="Finish Frontend Simplified" />
+            {/*
+            <Todo title="Finish The Interview Section" paragraph="Finish every interview question in the next 6 weeks." /> */}
+            <Todo title="Finish The Interview Section" />
+            {/*
+            <Todo title="Land a $100k Job" paragraph="Apply to 100 jobs" /> */}
+            <Todo title="Land a $100k Job" />
+          </div>
+          {showModal &&
+          <Modal title="Confirm Delete?" /> }
+        </div>
+        );
+      }
+      
+      export default App; -->
+
+  - useState
+
+    App.jsx: 
+
+      <!-- import "./App.css";
+      import Todo from "./components/Todo.jsx";
+      import Title from "./components/Title.jsx";
+      import Modal from "./components/Modal.jsx";
+      import React, { useState } from "react";
+      
+      function App() {
+        const [showModal, setShowModal] = useState(false);
+      
+      function onTodoDelete() {
+        setShowModal((showModal) => true);
+        console.log("onTodoDelete()");
+      }
+      
+      function onTodoCancel() {
+        setShowModal((showModal) => false);
+        console.log("onTodoCancel()");
+      }
+      
+      function onTodoConfirm() {
+        setShowModal((showModal) => false);
+        console.log("onTodoConfirm()");
+      }
+      
+      return (
+          <div>
+            <Title />
+            <div>
+              <input type="text" onChange={(event)=> {
+              console.log(event.target.value);
+              }}
+              />
+              <button onClick={()=> setShowModal(true)}>Add Todo</button>
+            </div>
+            <div className="todo__wrapper">
+              <Todo onTodoDelete={onTodoDelete} title="Finish Frontend Simplified" />
+              <Todo onTodoDelete={onTodoDelete} title="Finish The Interview Section" />
+              <Todo onTodoDelete={onTodoDelete} title="Land a $100k Job" />
+            </div>
+            {showModal && (
+            <Modal title="Confirm Delete?" onTodoCancel={onTodoCancel} onTodoConfirm={onTodoConfirm} />
+            )}
+          </div>
+        );
+      }
+      
+      export default App; -->
+
+    Todo.jsx: 
+
+      <!-- import "./Todo.css";
+      
+      function Todo({ title, onTodoDelete }) {
+        function deleteTodo(id) {
+          console.log("deleteTodo()", title);
+        }
+      
+      return (
+          <div className="todo">
+            {/* <h2>{title}</h2> */}
+            <p>{title}</p>
+            {/* <p>{paragraph}</p> */}
+            <button onClick={onTodoDelete}>Delete</button>
+          </div>
+        );
+      }
+      
+      export default Todo; -->
+
+    Modal.jsx: 
+
+      <!-- import "./Modal.css";
+      
+      function Modal({ title, onTodoCancel, onTodoConfirm }) {
+        return (
+          <div>
+            <div className="modal">
+              <p className="modal__title">{title}</p>
+              <div className="modal__buttons">
+                <button onClick={onTodoCancel} className="btn btn__cancel">
+                  Cancel
+                </button>
+                <button onClick={onTodoConfirm} className="btn">
+                  Confirm
+                </button>
+              </div>
+            </div>
+            <div className="backdrop" />
+          </div>
+        );
+      }
+      
+      export default Modal; -->
+
+  - useEffect
+  
+    useEffect allows the program to execute whatever is written inside a component when rendered.
+    
+    useEffect has two argument values we need to pass into the function:
+    - the first argument is a callback
+      <!-- () => {} -->
+    - the second argument is the dependency list passed into an array
+      <!-- [] -->
+
+
+    A common use is to fetch some data, as soon as the page renders
+      ex. when you open instagram, it fetches posts 
+    
+      Only on whole program renders
+        <!-- useEffect(() => {
+          console.log('ONLY on mount')
+        }, []) -->
+
+      On render and a specific component change
+        <!-- useEffect(() => {
+          console.log(`on mount AND on ${showModal} change`)
+        }, [showModal]) -->
+
+      On every render
+        <!-- useEffect(() => {
+          console.log('EVERY render')
+        }) -->
+
+  Notes Making a Counter Component and Function: 
+  
+    <!-- import { React, useState } from "react";
+    
+    function Counter() {
+    const [counter, setCounter] = useState(0);
+    
+    const increment = () => {
+    setCounter((count) => count + 1);
+    };
+    
+    const decrement = () => {
+    setCounter((count) => count - 1);
+    };
+    
+    return (
+    <div className="counter-wrapper">
+      <button className="decrement-btn" onClick={decrement}>
+        -
+      </button>
+      <span className="counter__output">{ counter }</span>
+      <button className="increment-btn" onClick={increment}>
+        +
+      </button>
+    </div>
+    );
+    }
+    
+    export default Counter; -->
+
+  Notes Using Objects in React:
+
+    <!-- import { React, useState } from "react";
+    
+    function Shopping() {
+    const [cart, setCart] = useState({ item: "Apple", quantity: 0 });
+    
+    function addApple() {
+    // 1. Use a callback to get the previous value
+    // 2. Spread out all the properties of the previous state
+    // 3. Only change the property that you need to change
+      setCart(prevCart => ({
+      ...prevCart,
+      quantity: prevCart.quantity + 1,
+      }));
+    }
+    
+    function remApple() {
+      setCart(prevCart => ({
+      ...prevCart,
+      quantity: prevCart.quantity - 1,
+      }));
+    }
+    
+    return (
+      <div className="counter-wrapper">
+        <button onClick={remApple}>-</button>
+        {cart.quantity}
+        {cart.item}
+        <button onClick={addApple}>+</button>
+      </div>
+      );
+    }
+    
+    export default Shopping; -->
+
+  Notes Using Arrays in React:
+
+    <!-- import { React, useState } from "react";
+    
+    function ArraysInReact() {
+      const [arr, setArr] = useState([]);
+    
+    function addPlus() {
+      setArr(prevArr => [ ...prevArr, "+" ]);
+    }
+    
+    function addMinus() {
+      setArr((prevArr) => [...prevArr, "-" ]);
+    }
+    
+    function reset() {
+      setArr([]);
+    }
+    
+    return (
+        <div className="counter-wrapper">
+          <button onClick={ addMinus }> - </button>
+          <button onClick={ addPlus }> + </button>
+          <button onClick={ reset }> Reset </button>
+          {arr.toString()}
+        </div>
+      );
+    }
+    
+    export default ArraysInReact; -->
+
+  Notes on changing values of different data types:
+    Number
+      <!-- setNum(10) -->
+    Booleans
+      <!-- setBool(true) -->
+    Strings
+      <!-- setSyr('Hello World') -->
+    Objects 
+      <!-- setObj(newObj) -->
+    Arrays
+      <!-- setArr(newArr) -->
+
+    What if we have a value dependency in our function?
+      We add a callback:
+
+      Number
+        <!-- setNum(10)
+        setNum(prevNum => prevNum + 10)  -->
+      Booleans
+        <!-- setBool(true)
+        setBool(prevBool => !prevBool)  -->
+      Strings
+        <!-- setStr('Frontend')
+        setStr(prevStr => prevStr + 'Simplified')  -->
+      Objects
+        setObj(prevObj => ({...prevObj, quantity: prevObj.quantity + 1}))
+      Arrays
+        setArr(prevArr => ([...prevArr, 5]))
+
+  Notes Emitting Events:
+    Parent => 
+      passes props to the Child, recieves emitted events
+    Child =>
+      recieves props from Parent, and passes emit events
+
+    Parent:
+      
+      <!-- function Parent() {
+
+        function clicked() {
+          console.log('Parent notified')
+        }
+
+        return (
+          <Child clicked="{clicked}" />
+        )
+      } -->
+
+      clicked="{clicked}" => passes the property to the Child
+
+    Child:
+      
+      <!-- function Child({ clicked }) {
+        return (
+          <button onClick="{clicked}">Child Button</button>
+        )
+      } -->
+
+      onClick="{clicked}" => emit events to the Parent
