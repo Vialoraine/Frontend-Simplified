@@ -509,8 +509,135 @@ Props
       
       export default Todo -->
 
+Event Handlers
+
+  What are event handlers?
+    Code that executes when an event occurs
+
+  Most important event handlers:
+    - onClick
+
+
+    - onChange 
         
 
+  Notes:
 
+  onClick:
+
+    When we pass a function to be called within a jsx expression, we don't add the ().
+
+    Todo.jsx: 
+
+      <!-- import "./Todo.css";
+      
+      function Todo({ title, paragraph }) {
+        function deleteTodo() {
+          console.log('deleteTodo()');
+      }
+      
+      return (
+        <div className="todo">
+          <h2>{title}</h2>
+          <p>{paragraph}</p>
+          <button onClick={deleteTodo}>Delete</button>
+        </div>
+        );
+      }
+      
+      export default Todo; -->
+
+    If we do need to add a pass in an argument within a jsx expression we turn it into a call back function, so it doesn't execute immediately
+
+    Todo.jsx:
+
+      <!-- import "./Todo.css";
+
+      // function Todo({ title, paragraph }) {
+      function Todo({ title }) {
+        function deleteTodo(id) {
+          console.log('deleteTodo()', title);
+        }
+
+        return (
+          <div className="todo">
+            {/* <h2>{title}</h2> */}
+            <p>{title}</p>
+            {/* <p>{paragraph}</p> */}
+            <button onClick={()=> deleteTodo(1)}>Delete</button>
+          </div>
+        );
+      }
+
+      export default Todo; -->
+
+    Modal.jsx: 
+
+      <!-- import "./Modal.css";
+      
+      function Modal({ title }) {
+        return (
+          <div>
+            <div className="modal">
+              <p className="modal__title">{title}</p>
+              <div className="modal__buttons">
+                <button className="btn btn__cancel" onClick={(event)=> {
+                  console.log("cancel");
+                  }}
+                  >
+                  Cancel
+                </button>
+                <button className="btn" onClick={(event)=> {
+                  console.log("confirm");
+                  }}
+                  >
+                  Confirm
+                </button>
+              </div>
+            </div>
+            <div className="backdrop" />
+          </div>
+        );
+      }
+      
+      export default Modal; -->
+
+
+  onChange:
+
+    App.jsx:
+
+      <!-- import "./App.css";
+      import Todo from "./components/Todo.jsx";
+      import Title from "./components/Title.jsx";
+      import Modal from "./components/Modal.jsx";
+      
+      function App() {
+        return (
+          <div>
+            <Title />
+            <div>
+              <input type="text" onChange={(event)=> {
+              console.log(event.target.value)
+              }} />
+              <button>Add Todo</button>
+            </div>
+            <div className="todo__wrapper">
+              {/*
+              <Todo title="Finish Frontend Simplified" paragraph="Code along with Frontend Simplified" /> */}
+              <Todo title="Finish Frontend Simplified" />
+              {/*
+              <Todo title="Finish The Interview Section" paragraph="Finish every interview question in the next 6 weeks." /> */}
+              <Todo title="Finish The Interview Section" />
+              {/*
+              <Todo title="Land a $100k Job" paragraph="Apply to 100 jobs" /> */}
+              <Todo title="Land a $100k Job" />
+            </div>
+            <Modal title="Are you sure you want to delete?" />
+          </div>
+        );
+      }
+      
+      export default App; -->
 
 
