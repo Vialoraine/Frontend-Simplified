@@ -15,12 +15,13 @@ function Home() {
   }
 
   useEffect(() => {
-    fetchUsers();
+    setTimeout(() => {
+      fetchUsers();   
+    }, 2000);
   }, []);
 
-  return (
-    <div>
-      {users.map((user) => (
+  function renderUsers() {
+    return users.map((user) => (
         <Link to={`/users/${user.id}`} key={user.id}>
           <User
             id={user.id}
@@ -29,9 +30,20 @@ function Home() {
             username={user.username}
           />
         </Link>
-      ))}
-    </div>
-  );
-}
+      ));
+    }
+
+    function renderSkeletonLoading() {
+      return <h1>Loading...</h1>;
+    }
+
+    return (
+      <div>
+        {users.length ? renderUsers() : renderSkeletonLoading() }
+      </div>
+    );
+  }
+
+
 
 export default Home;
