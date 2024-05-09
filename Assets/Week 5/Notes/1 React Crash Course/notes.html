@@ -17,6 +17,8 @@ Intro to React
     - Maintainable
     - Scalable
     - Popular frontend Framework
+
+  npx create-react-app file-name => creates a skeleton react app
   
   npm start => starts up local server (localhost:3000)
 
@@ -187,12 +189,12 @@ Reusable Components
       App.jsx:
         We add a new div with a className of todo__wrapper, wrapping our todo components inside
 
-        import './App.css';
+        <!-- import './App.css';
         import Todo from './components/Todo.jsx'
         import Title from './components/Title.jsx'
         
         
-        <!-- function App() {
+        function App() {
           return (
             <div>
               <Title />
@@ -994,6 +996,14 @@ React Routing
 
   What is routing in React?
     Routing lets you navigate around your website => changing the current url
+
+    in the terminal:
+
+    <!-- npm install react-router-dom -->
+
+    in our app.jsx:
+
+    <!-- import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; -->
 
 API Integration
 
