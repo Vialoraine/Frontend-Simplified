@@ -9,6 +9,7 @@ import {
   doc,
   query,
   where,
+  updateDoc,
 } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
@@ -20,6 +21,33 @@ import {
 function App() {
   const [user, setUser] = React.useState({});
   const [loading, setLoading] = React.useState(true);
+
+  // How to Update
+  //  async function updatePost() {
+  //     const hardCodedId = "zX1ISqTD3z2AOeprhMpx";
+  //     const postRef = doc(db, "posts", hardCodedId);
+  //     const post = await getPostById(hardCodedId);
+  //     const newPost = {
+  //       description: "Finish Frontend Simplified",
+  //       uid: "1",
+  //       title: "Land a $300k job",
+  //     };
+  //     updateDoc(postRef, newPost);
+  //   }
+
+  // How to Update: Best Practice
+  async function updatePost() {
+    const hardCodedId = "zX1ISqTD3z2AOeprhMpx";
+    const postRef = doc(db, "posts", hardCodedId);
+    const post = await getPostById(hardCodedId);
+    console.log(post);
+    const newPost = {
+      ...post,
+      title: "Land a $400k job",
+    };
+    console.log(newPost);
+    updateDoc(postRef, newPost);
+  }
 
   // How to Create
   function createPost() {
@@ -39,13 +67,22 @@ function App() {
   }
 
   // How to Read A Single Post by Id
-  async function getPostById(Id) {
-    const hardCodedId = "zX1ISqTD3z2AOeprhMpx";
-    const postRef = doc(db, "posts", hardCodedId);
+  // async function getPostById(id) {
+  //   const hardCodedId = "zX1ISqTD3z2AOeprhMpx";
+  //   const postRef = doc(db, "posts", hardCodedId);
+  //   const postSnap = await getDoc(postRef);
+  //   if (postSnap.exists()) {
+  //     const post = postSnap.data();
+  //     console.log(post);
+  //   }
+  // }
+
+  // How to Read A Single Post by Id: Better Practice
+  async function getPostById(id) {
+    const postRef = doc(db, "posts", id);
     const postSnap = await getDoc(postRef);
     if (postSnap.exists()) {
-      const post = postSnap.data();
-      console.log(post);
+      return postSnap.data();
     }
   }
 
@@ -104,6 +141,7 @@ function App() {
       <button onClick={getAllPosts}>Get All Posts</button>
       <button onClick={getPostById}>Get Post by Id</button>
       <button onClick={getPostByUid}>Get Post by Uid</button>
+      <button onClick={updatePost}>Update Post</button>
     </div>
   );
 }
