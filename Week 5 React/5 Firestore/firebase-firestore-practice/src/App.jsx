@@ -1,7 +1,15 @@
 import React from "react";
 import "./App.css";
 import { auth, db } from "./firebase/init";
-import { collection, addDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  getDoc,
+  doc,
+  query,
+  where,
+} from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -13,12 +21,42 @@ function App() {
   const [user, setUser] = React.useState({});
   const [loading, setLoading] = React.useState(true);
 
+  // How to Create
   function createPost() {
     const post = {
-      title: "Land a $400k job",
-      description: "Finish Frontend Simplified",
+      title: "Finish Interview Section",
+      description: "Do Frontend Simplified",
+      uid: user.uid,
     };
     addDoc(collection(db, "posts"), post);
+  }
+
+  // How to Read All
+  async function getAllPosts() {
+    const { docs } = await getDocs(collection(db, "posts"));
+    const posts = docs.map((elem) => ({ ...elem.data(), id: elem.id }));
+    console.log(posts);
+  }
+
+  // How to Read A Single Post by Id
+  async function getPostById(Id) {
+    const hardCodedId = "zX1ISqTD3z2AOeprhMpx";
+    const postRef = doc(db, "posts", hardCodedId);
+    const postSnap = await getDoc(postRef);
+    if (postSnap.exists()) {
+      const post = postSnap.data();
+      console.log(post);
+    }
+  }
+
+  // How to Read Posts by Query (e.g. only post by a specific user)
+  async function getPostByUid(Uid) {
+    const postCollectionUidRef = await query(
+      collection(db, "posts"),
+      where("uid", "==", user.uid)
+    );
+    const { docs } = await getDocs(postCollectionUidRef);
+    console.log(docs.map((doc) => doc.data()));
   }
 
   React.useEffect(() => {
@@ -63,6 +101,9 @@ function App() {
       <button onClick={logout}>Logout</button>
       {loading ? "Loading..." : user.email}
       <button onClick={createPost}>Create Post</button>
+      <button onClick={getAllPosts}>Get All Posts</button>
+      <button onClick={getPostById}>Get Post by Id</button>
+      <button onClick={getPostByUid}>Get Post by Uid</button>
     </div>
   );
 }
